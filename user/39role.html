@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.role-box{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				display: table;
+				/*background-color: #4d566f;*/
+				background-image: url(img/rolebg1.jpg);
+				background-position: 50%;
+				background-size: cover;
+			}
+			.role-box .box-td{
+				display: table-cell;
+				vertical-align: middle;
+				width: 25%;
+				height: 100%;
+			}
+			.role-box .box-td:nth-child(2){
+				width: 50%;
+			}
+			.role-box .box-td:nth-child(2) .therole{
+				margin: auto;
+				width: 100%;
+				height: 75%;
+				background-image: url(img/role.png);
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.role-box .box-td .sider{
+				padding: 0px 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.role-box .box-td .sider .box{
+				margin-top: 25px;
+				margin-bottom: 2px;
+				width: 50px;
+				height: 50px;
+				background-color: #eee;
+				border-radius: 6px;
+				background-size: 50px;
+			}
+			.role-box .box-td .sider .badge{
+				background-color: rgba(0,0,0,0.5);
+				color: #fff;
+			}
+
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide39-1{
+				right: 25px;
+				top:2rem;
+			}
+
+			.guide .line{
+				float: right;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide39-1 .guide-content{
+				border-bottom-right-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<header class="bar bar-nav">
+				<a href="shop.html" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">人物</h1>
+			</header>
+
+			<div class="content role-content">
+				<div class="guide guide39-1">
+					<div class="guide-content">
+						点击【纪念册】进入纪念册页面
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="role-box">
+					<div class="box-td">
+						<div class="sider left-sider">
+							<div class="function bag-function">
+								<div class="box" style="background-image: url(img/role_bag.png);"></div>
+								<span class="badge">背包</span>
+							</div>
+							<div class="function prove-function">
+								<div class="box" style="background-image: url(img/role_prove.png);"></div>
+								<span class="badge">技能</span>
+							</div>
+							<div class="function shop-function">
+								<div class="box" style="background-image: url(img/role_shop.png);"></div>
+								<span class="badge">黑店</span>
+							</div>
+							<div class="function course-function">
+								<div class="box" style="background-image: url(img/role_course.png);"></div>
+								<span class="badge">课程</span>
+							</div>
+						</div>
+					</div>
+					<div class="box-td">
+						<div class="therole"></div>
+					</div>
+					<div class="box-td left-sider">
+						<div class="sider right-sider">
+							<div class="function record-function">
+								<div class="box" style="background-image: url(img/role_honor.png);"></div>
+								<span class="badge">成就</span>
+							</div>
+							<div class="function ranking-function">
+								<div class="box" style="background-image: url(img/role_rank.png);"></div>
+								<span class="badge">天梯</span>
+							</div>
+							<div class="function job-function">
+								<div class="box" style="background-image: url(img/role_rank.png);"></div>
+								<span class="badge">全职</span>
+							</div>
+							<div class="function yearbook-function guide-next">
+								<div class="box" style="background-image: url(img/role_parttime.png);"></div>
+								<span class="badge">纪念册</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+				$(document).on('click','.bag-function',function(){
+					self.location.href='22change.html';
+				})
+				$(document).on('click','.prove-function',function(){
+					self.location.href='24prove.html';
+				})
+				$(document).on('click','.shop-function',function(){
+					self.location.href='../shop/27shop.html';
+				})
+				$(document).on('click','.course-function',function(){
+					self.location.href='31course.html';
+				})
+
+				$(document).on('click','.record-function',function(){
+					self.location.href='33record.html';
+				})
+				$(document).on('click','.ranking-function',function(){
+					self.location.href='35ranking.html';
+				})
+				$(document).on('click','.job-function',function(){
+					self.location.href='37job.html';
+				})
+				$(document).on('click','.yearbook-function',function(){
+					self.location.href='40yearbook.html';
+				})
+
+				$(".guide39-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px;");
+				$(window).resize(function(){
+					$(".guide39-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px");
+				})
+			})
+		</script>
+	</body>
+</html>

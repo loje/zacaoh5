@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.role-box{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				display: table;
+				background-color: #645250;
+				overflow: hidden;
+			}
+			.role-box .box-td{
+				display: table-cell;
+				vertical-align: middle;
+				width: 25%;
+				height: 100%;
+			}
+			.role-box .box-td:nth-child(2){
+				width: 50%;
+				vertical-align: top;
+			}
+			.role-box .box-td:nth-child(2) .therole{
+				position: relative;
+				margin: auto;
+				width: 100%;
+				height: 100%;
+			}
+			/*.role-box .box-td:nth-child(2) .therole .role-top{
+				position: relative;
+				z-index: 2;
+				margin-bottom: -6px;
+				margin-left: 1px;
+				width: 100%;
+				height: 28.448275862069%;
+				background-image: url(img/role_top.png);
+				background-position: 50% 100%;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.role-box .box-td:nth-child(2) .therole .role-mid{
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: 27.758620689655%;
+				background-image: url(img/role_mid.png);
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.role-box .box-td:nth-child(2) .therole .role-btm{
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				height: 43.793103448276%;
+				background-image: url(img/role_btm.png);
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}*/
+			.therole .role-top,
+			.therole .role-mid,
+			.therole .role-btm{
+				position: absolute;
+				margin-bottom: -7px;
+				margin-left: 1px;
+				width: 100%;
+				height: 100%;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			.therole .role-top{
+				z-index: 3;
+				background-image: url(img/role/boy/01.png);
+			}
+			.therole .role-mid{
+				z-index: 2;
+				background-image: url(img/role/boy/02.png);
+			}
+			.therole .role-btm{
+				z-index: 1;
+				background-image: url(img/role/boy/03.png);
+			}
+			.role-stage{
+				position: absolute;
+				left: 0px;
+				bottom: -65px;
+				width: 100%;
+				height: 90px;
+				background-image: url(img/stage.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position:50% 100%;
+				z-index: 0;
+			}
+			.role-box .box-td .sider{
+				padding: 0px 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.role-box .box-td .sider .box{
+				margin-top: 25px;
+				margin-bottom: 2px;
+				width: 50px;
+				height: 50px;
+				background-color: #eee;
+				border-radius: 6px;
+				background-size: 50px;
+			}
+			.role-box .box-td .sider .box i.iconfontzacao{
+				font-size: 36px;
+				line-height: 50px;
+				color: rgba(0,0,0,0.35);
+			}
+			.role-box .box-td .sider .badge{
+				background-color: rgba(0,0,0,0.5);
+				color: #fff;
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide36-1{
+				right: 25px;
+				top:2rem;
+			}
+
+			.guide .line{
+				float: right;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide36-1 .guide-content{
+				border-bottom-right-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">人物</h1>
+			</header>
+
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="content role-content">
+				<div class="guide guide36-1">
+					<div class="guide-content">
+						点击【黑店】<br/>进入黑店页面
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="role-box">
+					<div class="box-td">
+						<div class="sider left-sider">
+							<div class="function bag-function">
+								<div class="box" style="background-image: linear-gradient(-220deg, #5e8aef 46%, #4071de 47%);background-image: -webkit-linear-gradient(-220deg, #5e8aef 46%, #4071de 47%);box-shadow: 0px 2px 0px #35497a;">
+									<i class="iconfontzacao">&#xe666;</i>
+								</div>
+								<span class="badge">背包</span>
+							</div>
+							
+							<div class="function prove-function">
+								<div class="box" style="background-image: linear-gradient(-220deg, #59b2f1 46%, #409dde 47%);background-image: -webkit-linear-gradient(-220deg, #59b2f1 46%, #409dde 47%);box-shadow: 0px 2px 0px #345474;">
+									<i class="iconfontzacao">&#xe64f;</i>
+								</div>
+								<span class="badge">技能</span>
+							</div>
+							<div class="function honor-function">
+								<div class="box" style="background-image: linear-gradient(-220deg, #4cc2e0 46%, #26aacb 47%);background-image: -webkit-linear-gradient(-220deg, #4cc2e0 46%, #26aacb 47%);box-shadow: 0px 2px 0px #2a4e62;">
+									<i class="iconfontzacao">&#xe631;</i>
+								</div>
+								<span class="badge">荣誉殿堂</span>
+							</div>
+						</div>
+					</div>
+					<div class="box-td">
+						<div class="therole">
+							<div class="role-top"></div>
+							<div class="role-mid"></div>
+							<div class="role-btm"></div>
+							<div class="role-stage"></div>
+						</div>
+					</div>
+					<div class="box-td left-sider">
+						<div class="sider right-sider">
+							
+							<div class="function record-function">
+								<div class="box" style="background-image: linear-gradient(-220deg, #ffd632 46%, #e3bb1d 47%);background-image: -webkit-linear-gradient(-220deg, #ffd632 46%, #e3bb1d 47%);box-shadow: 0px 2px 0px #534f3b;">
+									<i class="iconfontzacao">&#xe608;</i>
+								</div>
+								<span class="badge">成就</span>
+							</div>
+							<div class="function ranking-function">
+								<div class="box" style="background-image: linear-gradient(-220deg, #ffaa32 46%, #eb900f 47%);background-image: -webkit-linear-gradient(-220deg, #ffaa32 46%, #eb900f 47%);box-shadow: 0px 2px 0px #5f4d3c;">
+									<i class="iconfontzacao">&#xe627;</i>
+								</div>
+								<span class="badge">天梯</span>
+							</div>
+							<div class="function shop-function guide-next">
+								<div class="box" style="background-image: linear-gradient(-220deg, #f37f6d 46%, #ea6e68 47%);background-image: -webkit-linear-gradient(-220deg, #f37f6d 46%, #ea6e68 47%);box-shadow: 0px 2px 0px #66434e;">
+									<i class="iconfontzacao">&#xe609;</i>
+								</div>
+								<span class="badge">黑店</span>
+							</div>
+							<!-- <div class="function job-function">
+								<div class="box" style="background-image: url(img/role_rank.png);"></div>
+								<span class="badge">全职</span>
+							</div>
+							<div class="function yearbook-function">
+								<div class="box" style="background-image: url(img/role_parttime.png);"></div>
+								<span class="badge">纪念册</span>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript" src='../zepto.cookie.min.js'></script>
+
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+				// $(document).on('click','.bag-function',function(){
+				// 	self.location.href='22change.html';
+				// })
+				// $(document).on('click','.prove-function',function(){
+				// 	self.location.href='24prove.html';
+				// })
+				$(document).on('click','.shop-function',function(){
+					self.location.href='../shop/27shop.html';
+				})
+				// $(document).on('click','.course-function',function(){
+				// 	self.location.href='31course.html';
+				// })
+
+				// $(document).on('click','.record-function',function(){
+				// 	self.location.href='33record.html';
+				// })
+				// $(document).on('click','.ranking-function',function(){
+				// 	self.location.href='35ranking.html';
+				// })
+				// $(document).on('click','.job-function',function(){
+				// 	self.location.href='37job.html';
+				// })
+				// $(document).on('click','.yearbook-function',function(){
+				// 	self.location.href='40yearbook.html';
+				// })
+				var thehair1 = $.fn.cookie('thehair1');
+				var thehair2 = $.fn.cookie('thehair2');
+				var thehair3 = $.fn.cookie('thehair3');
+				var thehair4 = $.fn.cookie('thehair4');
+				 if(thehair1 == "0"){
+			    	$(".role-top").removeAttr("src");
+					$(".role-top").attr("style","background-image:url(img/role/boy/head/1.png);");
+			    }else if(thehair2 == "0"){
+			    	$(".role-top").removeAttr("src");
+					$(".role-top").attr("style","background-image:url(img/role/boy/head/2.png);");
+			    }else if(thehair3 == "0"){
+			    	$(".role-top").removeAttr("src");
+					$(".role-top").attr("style","background-image:url(img/role/boy/head/3.png);");
+			    }else if(thehair4 == "0"){
+			    	$(".role-top").removeAttr("src");
+					$(".role-top").attr("style","background-image:url(img/role/boy/head/4.png);");
+			    }
+
+			    var thecoat1 = $.fn.cookie('thecoat1');
+				var thecoat2 = $.fn.cookie('thecoat2');
+				var thecoat3 = $.fn.cookie('thecoat3');
+				var thecoat4 = $.fn.cookie('thecoat4');
+				if(thecoat1 == "0"){
+			    	$(".role-mid").removeAttr("src");
+					$(".role-mid").attr("style","background-image:url(img/role/boy/coat/1.png);");
+			    }else if(thecoat2 == "0"){
+			    	$(".role-mid").removeAttr("src");
+					$(".role-mid").attr("style","background-image:url(img/role/boy/coat/2.png);");
+			    }else if(thecoat3 == "0"){
+			    	$(".role-mid").removeAttr("src");
+					$(".role-mid").attr("style","background-image:url(img/role/boy/coat/3.png);");
+			    }else if(thecoat4 == "0"){
+			    	$(".role-mid").removeAttr("src");
+					$(".role-mid").attr("style","background-image:url(img/role/boy/coat/4.png);");
+			    }
+
+			    var thetrousers1 = $.fn.cookie('thetrousers1');
+				var thetrousers2 = $.fn.cookie('thetrousers2');
+				var thetrousers3 = $.fn.cookie('thetrousers2');
+				var thetrousers4 = $.fn.cookie('thetrousers2');
+
+				if(thetrousers1 == "0"){
+			    	$(".role-btm").removeAttr("src");
+					$(".role-btm").attr("style","background-image:url(img/role/boy/trousers/1.png);");
+			    }else if(thetrousers2 == "0"){
+			    	$(".role-btm").removeAttr("src");
+					$(".role-btm").attr("style","background-image:url(img/role/boy/trousers/2.png);");
+			    }else if(thetrousers3 == "0"){
+			    	$(".role-btm").removeAttr("src");
+					$(".role-btm").attr("style","background-image:url(img/role/boy/trousers/3.png);");
+			    }else if(thetrousers4 == "0"){
+			    	$(".role-btm").removeAttr("src");
+					$(".role-btm").attr("style","background-image:url(img/role/boy/trousers/4.png);");
+			    }
+			    
+				$(".guide36-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px;");
+				$(window).resize(function(){
+					$(".guide36-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px");
+				})
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/35ranking.html';
+				})
+			})
+		</script>
+	</body>
+</html>

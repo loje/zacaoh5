@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide37-1{
+				left: 50%;
+				top:2rem;
+			}
+
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+
+			.job-content .buttons-row{
+				border-top:1px solid #ddd;
+				padding: 0.25rem 0.5rem;
+			}
+			.job-content .buttons-row .button{
+			    border-color: #a66b0a;
+			    color: #a66b0a;
+			}
+			.job-content .buttons-row .button.active{
+				border-color: #a66b0a;
+			    color: #fff;
+			    background-color: #a66b0a;
+			}
+			.job-content .list-block{
+				border:none;
+			}
+			.job-content .list-block .media .media-right span{
+				width: 70px;
+			}
+			.job-content .list-block .media .media-right p{
+				margin:0px;
+				font-size: 12px;
+			}
+			.job-content .search-bar .media .media-right .get-search{
+				color: #a66b0a;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page job_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class='title'>全职</h1>
+				<a class="button button-link button-nav pull-right">
+					筛选排序
+				</a>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="content job-content">
+				<!-- Slider -->
+				<div class="swiper-container" data-space-between='0'>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(http://img01.chrstatic.com/atc/201612/1481869430331i8c2q7.jpg);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(http://img01.chrstatic.com/atc/201612/14805838796744jgxqs.jpg);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(http://img01.chrstatic.com/atc/201612/1480560061572u9qa8n.jpg);"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="search-bar">
+					<div class="media">
+						<div class="media-body">
+							<input type="text" class="form-control" placeholder="请输入关键字" />
+						</div>
+						<div class="media-right">
+							<button class="get-search">
+								<span class="icon icon-search"></span>
+							</button>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="buttons-row">
+					<a href="#tab1" class="tab-link active button">按职业</a>
+					<a href="#tab2" class="tab-link button">按企业</a>
+				</div>
+
+				<div class="tabs">
+					<div id="tab1" class="tab active">
+						<div class="list-block">
+							<a href="38job_detail.html" class="media guide-next">
+								<div class="media-body">
+									<h5>设计经理/主管 </h5>
+									<p>07-22</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★★★</span>
+									<p>五星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>资深Java工程师 </h5>
+									<p>08-30</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★★</span>
+									<p>四星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>产品经理(流量解决方案)</h5>
+									<p>06-23</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★</span>
+									<p>三星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>需求分析师</h5>
+									<p>06-22</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★</span>
+									<p>二星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>项目经理</h5>
+									<p>05-22</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★</span>
+									<p>一星匹配</p>
+								</div>
+							</a>
+							<p class="loaded">已加载完</p>
+						</div>
+					</div>
+					<div id="tab2" class="tab">
+						<div class="list-block">
+							<a class="media">
+								<div class="media-body">
+									<h5>易创艺乐</h5>
+									<p>移动互联网</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★★★</span>
+									<p>五星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>小牛金融</h5>
+									<p>移动互联网</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★★</span>
+									<p>四星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>云之讯网络技术有限公司</h5>
+									<p>移动互联网</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★★</span>
+									<p>三星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>美的智慧家居研究院</h5>
+									<p>硬件</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★★</span>
+									<p>二星匹配</p>
+								</div>
+							</a>
+							<a class="media">
+								<div class="media-body">
+									<h5>摩申网络技术有限公司</h5>
+									<p>智能硬件</p>
+								</div>
+								<div class="media-right">
+									<span class="star">★</span>
+									<p>一星匹配</p>
+								</div>
+							</a>
+							<p class="loaded">已加载完</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide guide37-1">
+					<div class="guide-content">
+						点击进入职业详情页
+					</div>
+					<div class="line"></div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(".guide37-1").attr("style","top:" + ($(".guide-next").offset().top - $(".guide37-1").height()*2) + "px;");
+				$(window).resize(function(){
+					$(".guide37-1").attr("style","top:" + ($(".guide-next").offset().top - $(".guide37-1").height()*2) + "px;");
+				})
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../map/29.1index.html';
+				})
+			})
+		</script>
+	</body>
+</html>

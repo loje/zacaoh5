@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link href="https://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide40-1{
+				/*right: 50%;*/
+				bottom:25%;
+			}
+
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #fff;
+				box-shadow: 0px 0px 6px #fff;
+			}
+
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(255,255,255,0.9);
+				color: #000;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide40-1 .point{
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				background-color: rgba(255,255,255,0.5);
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page page-current">
+			<header class="bar bar-nav">
+				<a href="javascript:history.go(-1);" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">毕业纪念册</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="content yearbook-content">
+				<div class="share-page" style="display: none;"></div>
+				<div class="swiper-container yearbook-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="thepage page1">
+								<div class="t"></div>
+								<div class="b"></div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="thepage page2">
+								<div class="swiper-container ybook-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="thepage page2-1">
+												<div class="box">
+												    <div class="lineF">
+												        <div class="boxF">
+												            <div class="boxS">
+												                <div class="boxT" style="background-image: url(img/userimg.jpg);">
+												                </div>
+												            </div>
+												        </div>
+												    </div>
+												</div>
+												<p class="username">黄浩秋</p>
+												<div class="school">
+													<p>在大学度过了<span>836</span>天</p>
+													<p>在深圳职业技术学院上了<span>4380</span>节课</p>
+												</div>
+												<div class="comment">
+													<div class="comment-top"></div>
+													<div class="comment-c">
+														<p>这些课程可以做成<span>128</span>本练习册</p>
+														<p>相当于<span>66</span>本《五年高考 三年模拟》</p>
+													</div>
+													<div class="comment-btm"></div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thepage page2-2">
+												<div class="t"></div>
+												<div class="row">
+													<div class="col-50">
+														<div class="record-box">
+															<div class="point point-tl"></div>
+															<div class="point point-tr"></div>
+															<div class="point point-bl"></div>
+															<div class="point point-br"></div>
+															<p>最高学业证明：</p>
+															<p>英语6级证书</p>
+															<p>奖学金：3次</p>
+															<p>及格：88次</p>
+															<p>挂科：0次</p>
+														</div>
+													</div>
+													<div class="col-50">
+														<div class="t"></div>
+														<div class="y-badge"></div>
+														<h5>华贵白金</h5>
+													</div>
+												</div>
+												<div class="comment">
+													<div class="comment-top"></div>
+													<div class="comment-c">
+														<p>该司机姿势水平优秀，善于上坡熄火，下坡油门，直道转弯灯，红灯还撞人，继续修炼998节课程，就能成为真正司机。</p>
+													</div>
+													<div class="comment-btm"></div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thepage page2-3">
+												<div class="t"></div>
+												<div class="lt">
+													<div class="lt-t">爱好</div>
+													<div class="lt-c">
+														<div class="lt-b">二次元，户外探险</div>
+													</div>
+												</div>
+												<div class="lt">
+													<div class="lt-t">近期活动</div>
+													<div class="lt-c">
+														<div class="lt-b">Fun学去玩，校学生会</div>
+													</div>
+												</div>
+												<div class="comment">
+													<div class="comment-top"></div>
+													<div class="comment-c">
+														<div class="c"></div>
+													</div>
+													<div class="comment-btm"></div>
+												</div>
+												<div class="row">
+													<div class="col-50">
+														<div class="the-car">
+															<div class="car-top"></div>
+															<div class="car"></div>
+														</div>
+													</div>
+													<div class="col-50">
+														<div class="ball">
+															<div class="ball-circle"></div>
+															<div class="the-ball">75%</div>
+														</div>
+														<p>超越了75%同级生！</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thepage page2-4">
+												<div class="t"></div>
+												<div class="love-car">
+													<div class="love-data">
+														<div class="data-ball db1"></div>
+														<div class="data-ball db2"></div>	
+														<div class="data">
+															<div class="data-c">
+																<div class="c">
+																	和<span style="color: #fcd24a;">5</span>个女生表过白，被拒绝<span style="color: #ff2400;">50</span>次<br/>
+																	谈过<span style="color: #7edfff;">0</span>次恋爱
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="lt">
+													<div class="lt-t">江湖人称</div>
+													<div class="lt-c">
+														<div class="lt-b">一秒500次震动小马达</div>
+													</div>
+												</div>
+
+												<div class="star-message message-left">
+													<div class="starpic" style="background-image: url(img/star1.png);"></div>
+													<div class="star-m">
+														<div class="m">
+															<p>陈冠希：</p>
+															<p>黄浩秋是我之后最好的摄影师！！</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="star-message message-right">
+													<div class="starpic" style="background-image: url(img/star2.png);"></div>
+													<div class="star-m">
+														<div class="m">
+															<p>周杰伦：</p>
+															<p>我最大的梦想，就是黄浩秋开一次黑。</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="star-message message-left">
+													<div class="starpic" style="background-image: url(img/star3.png);"></div>
+													<div class="star-m">
+														<div class="m">
+															<p>林志玲：</p>
+															<p>我的理想型？当然是和黄浩秋一样了啦</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thepage page2-5">
+												<div class="guide guide40-1">
+													<!-- <div class="point"></div> -->
+													<!-- <div class="line"></div> -->
+													<div class="guide-content">
+														点击结束大学生涯
+													</div>
+												</div>
+												<div class="t"></div>
+
+												<div class="comment">
+													<div class="comment-top"></div>
+													<div class="comment-c">
+														<div class="c"></div>
+														<div class="cm-ball cm-ball-l"></div>
+														<div class="cm-ball cm-ball-r"></div>
+													</div>
+													<div class="comment-btm"></div>
+												</div>
+												<div class="share-btn"></div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script src="https://cdn.bootcss.com/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			    $.init();
+
+			    $(document).on('click','.share-btn',function(){
+			    	$(".share-page").removeAttr("style");
+			    });
+
+			    $(document).on('click','.share-page',function(){
+			    	$(".share-page").attr("style","display:none;");
+			    });
+
+				var yearbookSwiper = new Swiper ('.yearbook-swiper', {
+					// direction: 'vertical',
+					loop: false,
+					onlyExternal : true,
+					nextButton:'.yearbook-content .yearbook-swiper .swiper-wrapper .swiper-slide .page1 .b',
+					// prevButton:'.page2-1',
+				});
+
+				var yearbookSwiper = new Swiper ('.ybook-swiper', {
+					loop: false,
+					pagination: '.swiper-pagination',
+				})
+
+
+				$(".guide40-1").attr("style","left:" + ($(window).width()/2 - $(".guide40-1").width()/2) + "px;");
+				$(document).on('click','.guide40-1',function(){
+					self.location.href='../wechat/40to41.html';
+				})
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/38job_detail.html';
+				})
+			})
+		</script>
+
+	</body>
+</html>

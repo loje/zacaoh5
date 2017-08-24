@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草</title>
+
+		<link href="https://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			body{
+				background-color: #333;
+			}
+			.splash-bg{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				
+				z-index: 0;
+				background-repeat: no-repeat;
+				background-position: 50%;
+				background-size: cover;
+
+				animation: marvelloading 3s linear;
+				-webkit-animation: marvelloading 3s linear;
+			}
+			.splash-page{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				color: #666;
+				letter-spacing: 1px;
+				z-index: 1;
+				background-color: rgba(0,0,0,0.75);
+			}
+			@keyframes marvelloading
+			{
+			0%  {background-image: url(40to41/s1.jpg);opacity:1;}
+			5%	{background-image: url(40to41/s2.jpg);opacity:0.95;}
+			10% {background-image: url(40to41/s3.jpg);opacity:0.9;}
+			15% {background-image: url(40to41/s4.jpg);opacity:0.85;}
+			20% {background-image: url(40to41/s5.jpg);opacity:0.8;}
+			25% {background-image: url(40to41/s6.jpg);opacity:0.75;}
+			30% {background-image: url(40to41/s7.jpg);opacity:0.7;}
+			35% {background-image: url(40to41/s8.jpg);opacity:0.65;}
+			40% {background-image: url(40to41/s9.jpg);opacity:0.6;}
+			45% {background-image: url(40to41/s1.jpg);opacity:0.55;}
+			50% {background-image: url(40to41/s2.jpg);opacity:0.5;}
+			55% {background-image: url(40to41/s3.jpg);opacity:0.45;}
+			60% {background-image: url(40to41/s4.jpg);opacity:0.4;}
+			65% {background-image: url(40to41/s5.jpg);opacity:0.35;}
+			70% {background-image: url(40to41/s6.jpg);opacity:0.3;}
+			75% {background-image: url(40to41/s7.jpg);opacity:0.25;}
+			80% {background-image: url(40to41/s8.jpg);opacity:0.2;}
+			85% {background-image: url(40to41/s9.jpg);opacity:0.15;}
+			90% {background-image: url(40to41/s1.jpg);opacity:0.1;}
+			95% {background-image: url(40to41/s2.jpg);opacity:0.05;}
+			100% {background-image: url(40to41/s3.jpg);opacity:0;}
+			}
+			@-webkit-keyframes marvelloading
+			{
+			0%  {background-image: url(40to41/s1.jpg);opacity:1;}
+			5%	{background-image: url(40to41/s2.jpg);opacity:0.95;}
+			10% {background-image: url(40to41/s3.jpg);opacity:0.9;}
+			15% {background-image: url(40to41/s4.jpg);opacity:0.85;}
+			20% {background-image: url(40to41/s5.jpg);opacity:0.8;}
+			25% {background-image: url(40to41/s6.jpg);opacity:0.75;}
+			30% {background-image: url(40to41/s7.jpg);opacity:0.7;}
+			35% {background-image: url(40to41/s8.jpg);opacity:0.65;}
+			40% {background-image: url(40to41/s9.jpg);opacity:0.6;}
+			45% {background-image: url(40to41/s1.jpg);opacity:0.55;}
+			50% {background-image: url(40to41/s2.jpg);opacity:0.5;}
+			55% {background-image: url(40to41/s3.jpg);opacity:0.45;}
+			60% {background-image: url(40to41/s4.jpg);opacity:0.4;}
+			65% {background-image: url(40to41/s5.jpg);opacity:0.35;}
+			70% {background-image: url(40to41/s6.jpg);opacity:0.3;}
+			75% {background-image: url(40to41/s7.jpg);opacity:0.25;}
+			80% {background-image: url(40to41/s8.jpg);opacity:0.2;}
+			85% {background-image: url(40to41/s9.jpg);opacity:0.15;}
+			90% {background-image: url(40to41/s1.jpg);opacity:0.1;}
+			95% {background-image: url(40to41/s2.jpg);opacity:0.05;}
+			100% {background-image: url(40to41/s3.jpg);opacity:0;}
+			}
+			.splash-page .page-td{
+				display: table-cell;
+				vertical-align: middle;
+				color: #fff;
+			}
+			.splash-page .page-td .splash{
+				opacity: 1;
+				transition: opacity .5s ease;
+				-webkit-transition:opacity .5s ease;
+			}
+			.splash-page .page-td .splash-end{
+				opacity: 1;
+				transition: opacity .5s ease;
+				-webkit-transition:opacity .5s ease;
+			}
+			.guide-next{
+				position: fixed;
+				bottom: 10%;
+				padding: 2px 8px;
+				/*font-size: 12px;*/
+				background-color: rgba(255,255,255,0.5);
+				color: #000;
+				z-index: 10;
+				border-radius: 4px;
+				letter-spacing: 1px;
+				transition: opacity .5s ease;
+				-webkit-transition:opacity .5s ease;
+			}
+			.splash p{
+				font-size: 16px;
+			}
+
+			.splash-end p{
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="guide-next" style="opacity: 0;">点此进入征信报告演示</div>
+		<div class="splash-page">
+			<div class="page-td">
+				<div class="splash">
+					<p>这些经历都将成为我们</p>
+					<p>由大学走向就业中最宝贵的财富</p>
+				</div>
+				<div class="splash-end" style="opacity: 0;">
+					<p>完</p>
+				</div>
+			</div>
+		</div>
+		<div class="splash-bg"></div>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var end = setTimeout(function(){
+					$(".splash").attr("style","opacity:0");
+					var end2 = setTimeout(function(){
+						$(".splash").remove();
+						$(".splash-end").removeAttr("style");
+						$(".guide-next").attr("style","left:" + ($(window).width()/2 - $(".guide-next").width()/2) + "px;");
+					},500);
+				},2500);
+
+				$(".guide-next").click(function(){
+					self.location.href = "../user/41report.html";
+				})
+				// var go = setTimeout(function(){
+				// 	clearTimeout(go);
+				// 	self.location.href = "../user/41report.html";
+				// },2000);
+			})
+		</script>
+	</body>
+</html>

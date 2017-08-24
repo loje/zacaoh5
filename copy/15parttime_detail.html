@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide15-1{
+				left: 50%;
+				bottom:40px;
+			}
+			.guide15-2{
+				position: absolute;
+				left: 50%;
+				bottom:0px;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide15-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+			.guide15-2 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+			.popup-apply .content-block{
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page parttimedetail_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class='title'>兼职</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="content parttime-content">
+				<div class="parttime-top">
+					<div class="media" style="background-image: url(http://huaban.com/img/login_header_blurbg.jpg);">
+						<div class="media-body">
+							<h5>礼宾兼职<span class="badge">急招</span></h5>
+						</div>
+						<div class="media-right">
+							<span>150元/天</span>
+						</div>
+					</div>
+
+					<div class="local">
+						<div class="map" style="background-image: url(img/map.jpg);"></div>
+					</div>
+
+					<div class="detail-info">
+						<p>上班日期：2017-1-1</p>
+						<p>上班时间：9:00-18:00</p>
+					</div>
+				</div>
+				<div class="parttime-detail">
+					<h5>兼职详情</h5>
+					<article>
+					【工作时间】<br>
+								9:00-11:00<br>
+								11:00-12:00<br>
+								15:00-16:00<br>
+								16:00-18:00<br>
+								有四个时间段，一人只能做一个时间段且只能做一次<br>
+								<br>
+								【工作地点】深圳市南山区深圳讯美科技广场（深大地铁站下来开导航，900m左右建议大家摩拜单车，深职院和新安学院的小伙伴也可以骑个摩拜过来半小时左右）<br>
+								<br>
+								【工作要求】要求是在校大学生或大专生，男女不限，带上学生证<br>
+								【工作内容】活动接待<br>
+								【注意事项】大学生，一人只能做一次，带上学生证 
+					</article>
+				</div>
+				<div class="guide guide15-1">
+					<div class="guide-content">
+						点击【我要报名】
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="parttime-apply guide-next">
+					<button class="button apply-popup">我要报名</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Popup -->
+		<div class="popup popup-apply">
+			<p class="popup-header">
+				<span class="close-popup">不报名了</span>
+			</p>
+			<div class="content-block">
+				<div class="list-block">
+					<ul>
+						<!-- Text inputs -->
+						<li>
+							<div class="content-block-title">姓名</div>
+							<input type="text" class="form-control name" value="黄浩秋">
+						</li>
+						<li>
+							<div class="content-block-title">性别</div>
+							<select class="form-control sex">
+								<option value="0">男性</option>
+							</select>
+						</li>
+						<li>
+							<div class="content-block-title">年龄</div>
+							<input type="number" class="form-control age" value="26">
+						</li>
+						<li>
+							<div class="content-block-title">学历</div>
+							<select class="form-control edu">
+								<option>大专</option>
+							</select>
+						</li>
+						<li>
+							<div class="content-block-title">手机</div>
+							<input type="number" class="form-control phone" maxlength="13" value="13800138000">
+						</li>
+						<li>
+							<div class="content-block-title">支付宝</div>
+							<input type="text" class="form-control alipay" value="buyme@qifanhui.cn">
+						</li>
+						
+						<h4>其他信息</h4>
+						<hr>
+						<li>
+							<div class="content-block-title">身高</div>
+							<div class="input-group">
+								<input type="text" class="height" value="183">
+								<span class="input-group-addon">cm</span>
+							</div>
+						</li>
+						<li>
+							<div class="content-block-title">胸围</div>
+							<div class="input-group">
+								<input type="text" class="chest" value="78">
+								<span class="input-group-addon">cm</span>
+							</div>
+						</li>
+						<li>
+							<div class="content-block-title">腰围</div>
+							<div class="input-group">
+								<input type="text" class="waistline" value="67">
+								<span class="input-group-addon">cm</span>
+							</div>
+						</li>
+						<li>
+							<div class="content-block-title">臀围</div>
+							<div class="input-group">
+								<input type="text" class="hipline" value="73">
+								<span class="input-group-addon">cm</span>
+							</div>
+						</li>
+					</ul>
+				</div>		
+				<div class="guide guide15-2">
+					<div class="guide-content">
+						点击【提交报名】
+					</div>
+					<div class="line"></div>
+				</div>		
+			</div>
+			<a class="submit-apply guide-next">提交报名</a>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../copy/14rating.html';
+				})
+
+				$(document).on('click','.apply-popup', function () {
+					$.popup('.popup-apply');
+				});
+				$(document).on('click','.submit-apply', function () {
+					$.closeModal('.popup-apply');
+					$.alert('报名成功！',function(){
+						self.location.href='16parttime_eva.html';
+					});
+				});
+			})
+		</script>
+	</body>
+</html>

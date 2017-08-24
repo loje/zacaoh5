@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link href="https://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-table{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				z-index: 2001;
+			}
+			.guide-table .guide-td{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.guide-table .guide-td a{
+				display: inline-block;
+				padding: 3px 9px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 12px;
+				box-shadow: 0px 0px 12px #000;
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide11-1{
+				left: 50%;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				margin-left: -4px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="guide-table">
+			<div class="guide-td">
+				<a class="guide-next">点击本页面的任意处<br/>会触发短信通知功能</a>
+				<div class="guide guide11-1">
+					<div class="line"></div>
+					<div class="guide-content"></div>
+				</div>
+			</div>
+		</div>
+		<div class="guide-back">
+			<i class="iconfontzacao">&#xe774;</i> 返回上一步
+		</div>
+		<div class="page rating_page">
+			<div class="content rating-content">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-no-swiping">
+							<header class="bar bar-nav">
+								<a href="index.html" class="button button-link button-nav pull-left">
+									<span class="icon icon-left"></span>
+								</a>
+								<h1 class='title'>兼职</h1>
+							</header>
+							<div class="rating-top">
+								<div class="score-block">
+									<p>当前信用评级</p>
+									<div class="score-circle score">4.0</div>
+								</div>
+								<div class="profile-block">
+									<div class="row">
+										<div class="col-50">
+											<div class="user-profile">
+												<a class="tab-link will" href="#tab1">
+													<span class="theicon">
+														<!-- <span class="badge">2</span> -->
+														<i class="iconfontzacao">&#xe661;</i>
+													</span>
+													<p>可应聘兼职</p>
+												</a>
+											</div>
+										</div>
+										<div class="col-50">
+											<div class="user-profile">
+												<a class="tab-link ed" href="#tab2">
+													<span class="theicon">
+														<i class="iconfontzacao">&#xe674;</i>
+													</span>
+													<p>兼职记录</p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide swiper-no-swiping">
+							<div class="mini">
+								<div class="miniscore">
+									<span class="prev"><span class="icon icon-down"></span></span>
+									<span class="theminiscore">4.0</span>
+									<p>当前信用评级</p>
+								</div>
+								<div class="buttons-row">
+									<a href="#tab1" class="tab-link active button">可应聘兼职</a>
+									<a href="#tab2" class="tab-link button">兼职记录</a>
+								</div>	
+							</div>
+
+							<div class="rating-info">
+								<div class="tabs">
+									<div id="tab1" class="tab active">
+										<div class="list-block parttime-new">
+											<a class="media">
+												<div class="media-body">
+													<h5>问卷调查 <span class="badge badge-parttime">急招</span></h5>
+													<p><span class="date">2016/12/20</span> <span>深圳南山</span></p>
+												</div>
+												<div class="media-right">
+													<span>40</span>
+													<p>元/小时</p>
+												</div>
+											</a>
+											<a class="media">
+												<div class="media-body">
+													<h5>ofo推广 <span class="badge badge-parttime">急招</span></h5>
+													<p><span class="date">2016/12/19</span> <span>深圳南山科技园</span></p>
+												</div>
+												<div class="media-right">
+													<span>120</span>
+													<p>元/天</p>
+												</div>
+											</a>
+										</div>
+										<p class="loaded">已加载完</p>
+									</div>
+									<div id="tab2" class="tab">
+										<div class="list-block parttime-history">
+											<a href="parttime_detail.html" class="media">
+												<div class="media-body">
+													<p><span class="date">2016/11/20</span> <span class="addr">深圳南山</span></p>
+													<h5>接电话回访兼职</h5>
+												</div>
+											</a>
+											<a href="parttime_detail.html" class="media">
+												<div class="media-body">
+													<p><span class="date">2016/11/10</span> <span class="addr">深圳南山</span></p>
+													<h5>直招化妆品企业寒假工</h5>
+												</div>
+											</a>
+											<a href="parttime_detail.html" class="media">
+												<div class="media-body">
+													<p><span class="date">2016/11/8</span> <span class="addr">深圳南山</span></p>
+													<h5>骑车宣传人员（只需骑单车即可）</h5>
+												</div>
+											</a>
+											<a href="parttime_detail.html" class="media">
+												<div class="media-body">
+													<p><span class="date">2016/10/6</span> <span class="addr">深圳南山</span></p>
+													<h5>洗车场加油站地推人员</h5>
+												</div>
+											</a>
+										</div>
+										<p class="loaded">已加载完</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script src="https://cdn.bootcss.com/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../copy/12index.html';
+				})
+
+				$(document).on('click','.will',function(){
+					$(".rating-content .mini .buttons-row .tab-link:nth-child(1)").addClass('active');
+					$(".rating-content .mini .buttons-row .tab-link:nth-child(2)").removeClass('active');
+				})
+				$(document).on('click','.ed',function(){
+					$(".rating-content .mini .buttons-row .tab-link:nth-child(2)").addClass('active');
+					$(".rating-content .mini .buttons-row .tab-link:nth-child(1)").removeClass('active');
+				})
+
+				var mySwiper = new Swiper ('.swiper-container', {
+					direction: 'vertical',
+					loop: false,
+					nextButton: '.tab-link',
+					prevButton: '.miniscore',
+				})
+
+				var job_score = "4.0";
+				var job_count = "1";
+
+				var s = 0;
+				var score = setInterval(function(){
+					console.log("分数是" + job_score);
+					console.log("S是" + s);
+					if(job_score == ""){
+						$(".score").text(0);
+						$(".score").addClass("scoreafter");
+						clearInterval(score);
+					}else if(s < parseFloat(job_score)){
+						s = s + 0.10;
+						$(".score").text(s.toFixed(1));
+					}else if(s > parseFloat(job_score)){
+						clearInterval(score);
+						$(".score").text(s.toFixed(1));
+						if(s > 5){
+							s = s - 0.1;
+							$(".score").text(s.toFixed(1));
+						}
+					} 
+				},20);
+
+				var n = 0;
+				var parttimenum = setInterval(function(){
+					if(n >= 10){
+						clearInterval(parttimenum);
+					}else{
+						n = n + 1;
+						$(".parttime-number").text(job_count);
+					}
+				},50);
+
+
+				$(document).on('click','.guide-table',function(){
+					$.modal({
+						title:  '杂草提示',
+						text: '同学您好，有一份礼宾兼职与你的测评条件匹配，请问是否愿意开启短信接收兼职通知功能？',
+						buttons: [
+							{
+								text: '不接收',
+								onClick: function() {
+									
+								}
+							},
+							{
+								text: '接收',
+								onClick: function() {
+									self.location.href='14rating.html';
+									$.ajax({
+										type: "GET",
+										url: "test.php",
+										data: {
+											// username:$("#username").val(),
+											// content:$("#content").val()
+										},
+										dataType: "json",
+										success: function(data){
+											
+										}
+									});
+								}
+							},
+						]
+					})
+				})
+			})
+		</script>
+	</body>
+</html>

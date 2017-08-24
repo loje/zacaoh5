@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.btn-newcourse{
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				padding: 10px 12px;
+				background-color: #a66b0a;
+				color: #fff;
+				border-radius: 0px;
+				border:none;
+				letter-spacing: 1px;
+				outline: none!important;
+				z-index: 1;
+			}
+			.popup-course{
+				top:initial;
+				bottom: 0px;
+				padding: 0px 10px 10px 10px;
+				padding-top: 40px;
+				height: initial;
+				font-size: 14px;
+			}
+			.popup-course .close-popup{
+				position: absolute;
+				right:15px;
+				top:10px;
+				font-size: 12px;
+				letter-spacing: 1px;
+				color:#999;
+			}
+			.popup-course .course-form{
+				display: table;
+				padding: 5px 0px;
+				width: 100%;
+				clear: both;
+			}
+			.popup-course .course-form .form-name{
+				float: left;
+				padding: 10px 0px;
+				margin: 0px;
+				width: 16.6667%;
+				height: 40px;
+				color: #4a4a4a;
+				letter-spacing: 1px;
+			}
+			.popup-course .course-form .form-input{
+				float: left;
+				width: 83.33333333%;
+			}
+			.popup-course .course-form .form-input .form-control{
+				padding: 9px 12px;
+				width: 100%;
+				border-radius: 6px;
+				border:1px solid #e8e8e8;
+			}
+			.popup-course .submit-add{
+				margin-top: 5px;
+				padding: 9px;
+				width: 100%;
+				border-radius: 6px;
+				border:none;
+				background-color: #1aad19;
+				color: #fff;
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide31-1{
+				right: 20px;
+				bottom:20px;
+			}
+
+			.guide .point{
+				margin: auto;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page page-current">
+			<!-- <div class="guide-table">
+				<div class="guide-td">
+					<a class="guide-next" href="../user/32role.html">接下来,点击这里回到人物页面</a>
+					<div class="guide guide31-1">
+						<div class="line"></div>
+						<div class="guide-content"></div>
+					</div>
+				</div>
+			</div> -->
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<input type="text" class="title" id='picker' placeholder="我的课表" />
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="guide guide31-1">
+				<div class="point"></div>
+				<div class="line"></div>
+				<div class="guide-content">
+					点击这里返回人物页面
+				</div>
+			</div>
+			<div class="content content-course" style="padding-bottom: 50px;">
+				<div class="course-top">
+					<div class="month">12</div>
+					<ul class="week">
+						<li>
+							<a>
+								<span>S</span>
+								<p>27</p>
+							</a>
+						</li>
+						<li class="today">
+							<a>
+								<div class="point"></div>
+								<span>M</span>
+								<p>28</p>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="point"></div>
+								<span>T</span>
+								<p>29</p>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>W</span>
+								<p>30</p>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>T</span>
+								<p>1</p>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>F</span>
+								<p>2</p>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>S</span>
+								<p>3</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="course-list list1">
+					<div class="course-box">
+						<p class="moment">上午</p>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">1</span>
+							</div>
+							<a class="media-body">
+								<h5>嵌入式系统应用</h5>
+								<p>孙光</p>
+								<p>西丽湖校区 格物园B座412</p>
+							</a>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">2</span>
+							</div>
+							<a class="media-body">
+								<h5>智能家居系统</h5>
+								<p>夏继媛</p>
+								<p>西丽湖校区 格物园B座406</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="course-box">
+						<p class="moment">下午</p>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">5</span>
+							</div>
+							<a class="media-body">
+								<h5>电子信息专题训练1</h5>
+								<p>晏凯</p>
+								<p>西丽湖校区 格物园B座602</p>
+							</a>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">6</span>
+							</div>
+							<a class="media-body">
+								<h5>传感器技术A</h5>
+								<p>贾方亮</p>
+								<p>西丽湖校区 格物园B座407</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="course-list list2" style="display: none;">
+					<div class="course-box">
+						<p class="moment">上午</p>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">1</span>
+							</div>
+							<a class="media-body">
+								<h5>传感器技术A</h5>
+								<p>贾方亮</p>
+								<p>西丽湖校区 格物园B座407</p>
+							</a>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">2</span>
+							</div>
+							<a class="media-body">
+								<h5>可编程逻辑器件应用B</h5>
+								<p>梁召峰</p>
+								<p>西丽湖校区 格物园B座609</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="course-box">
+						<p class="moment">下午</p>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">5</span>
+							</div>
+							<a class="media-body">
+								<h5>市场营销</h5>
+								<p>刘晓砚</p>
+								<p>西丽湖校区 日新楼南506</p>
+							</a>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<span class="serial">6</span>
+							</div>
+							<a class="media-body">
+								<h5>嵌入式编程基础</h5>
+								<p>梁召峰</p>
+								<p>西丽湖校区 格物园B座409</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="course-list list3" style="display: none;">
+					<div class="none-table">
+						<div class="none-td">
+							<p>今天没课快去嗨</p>
+						</div>
+					</div>
+				</div>
+
+				<button data-popup=".popup-course" class="btn-newcourse open-popup">增加课程</button>
+			</div>
+		</div>
+		<div class="popup popup-course">
+			<a href="#" class="close-popup">我放弃添加</a>
+			<div class="course-form">
+				<div class="form-name">课程</div>
+				<div class="form-input">
+					<input type="text" class="form-control" value="嵌入式系统应用" />
+				</div>
+			</div>
+			<div class="course-form">
+				<div class="form-name">节次</div>
+				<div class="form-input">
+					<select class="form-control" style="width: 90px;">
+						<option>第1节</option>
+					</select>
+					到
+					<select class="form-control" style="width: 90px;">
+						<option>第2节</option>
+					</select>
+				</div>
+			</div>
+			<div class="course-form">
+				<div class="form-name">周次</div>
+				<div class="form-input">
+					<button type="text" class="form-control">已选14周</button>
+				</div>
+			</div>
+			<div class="course-form">
+				<div class="form-name">星期</div>
+				<div class="form-input">
+					<select class="form-control">
+						<option>星期一</option>
+					</select>
+				</div>
+			</div>
+			<div class="course-form">
+				<div class="form-name">地点</div>
+				<div class="form-input">
+					<input type="text" class="form-control" value="东校区" style="width: 48%;" />
+					<input type="text" class="form-control" value="教学楼" style="width: 48%;" />
+				</div>
+			</div>
+			<div class="course-form">
+				<div class="form-name">课室</div>
+				<div class="form-input">
+					<input type="text" class="form-control" value="4楼东401"/>
+				</div>
+			</div>
+			<button class="submit-add">添加这门课程</button>
+		</div>
+
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+
+				$(document).on('click','.content-course .course-top ul li a', function () {
+					$(".content-course .course-top ul li").removeClass("chiose");
+					$(this).parent().addClass("chiose");
+				})
+
+				$(document).on('click','.content-course .course-top ul li:nth-child(1) a', function () {
+					$(".list3").removeAttr("style");
+					$(".list1").attr("style","display:none;");
+					$(".list2").attr("style","display:none;");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(2) a', function () {
+					$(".list3").attr("style","display:none;");
+					$(".list1").removeAttr("style");
+					$(".list2").attr("style","display:none;");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(3) a', function () {
+					$(".list3").attr("style","display:none;");
+					$(".list1").attr("style","display:none;");
+					$(".list2").removeAttr("style");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(4) a', function () {
+					$(".list3").removeAttr("style");
+					$(".list1").attr("style","display:none;");
+					$(".list2").attr("style","display:none;");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(5) a', function () {
+					$(".list3").removeAttr("style");
+					$(".list1").attr("style","display:none;");
+					$(".list2").attr("style","display:none;");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(6) a', function () {
+					$(".list3").removeAttr("style");
+					$(".list1").attr("style","display:none;");
+					$(".list2").attr("style","display:none;");
+				})
+				$(document).on('click','.content-course .course-top ul li:nth-child(7) a', function () {
+					$(".list3").removeAttr("style");
+					$(".list1").attr("style","display:none;");
+					$(".list2").attr("style","display:none;");
+				})
+
+				$(document).on('click','.submit-add',function(){
+					// $.alert('增加成功！');
+					// self.location.href = '../map/8index.html';
+					$.toast("向导过程中不可操作", 1000);
+					$.closeModal(".popup-course");
+				})
+
+				$(document).on('click','.guide31-1',function(){
+					self.location.href='../user/32role.html';
+				})
+			})
+		</script>
+
+	</body>
+</html>

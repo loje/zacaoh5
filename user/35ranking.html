@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			/*.guide-table{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				z-index: 2001;
+			}
+			.guide-table .guide-td{
+				padding-bottom: 30%;
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.guide-table .guide-td a{
+				display: inline-block;
+				padding: 3px 9px;
+				background-color: rgba(255,255,255,0.75);
+				color: #000;
+				border-radius: 6px;
+				font-size: 12px;
+				box-shadow: 0px 0px 12px #000;
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide35-1{
+				left: 50%;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #fff;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				margin-left: -4px;
+				padding: 5px;
+				background-color: rgba(255,255,255,0.9);
+				color: #000;
+				font-size: 12px;
+				border-radius: 50%;
+			}*/
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide35-1{
+				right: 20px;
+				bottom:20px;
+			}
+
+			.guide .point{
+				margin: auto;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				background-color: rgba(255,255,255,0.5);
+			}
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(255,255,255,0.9);
+				color: #000;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+	<body class="role_page">
+		<div class="page roleranking_page">
+			<!-- <div class="guide-table">
+				<div class="guide-td">
+					<a class="guide-next" href="../user/36role.html">接下来,点击这里回到人物页面</a>
+					<div class="guide guide35-1">
+						<div class="line"></div>
+						<div class="guide-content"></div>
+					</div>
+				</div>
+			</div> -->
+			<header class="bar bar-nav">
+				<a href="index.html" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+
+				<h1 class="title">排行榜</h1>
+			</header>
+
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="guide guide35-1">
+				<div class="point"></div>
+				<div class="line"></div>
+				<div class="guide-content">
+					点击这里回到人物页面
+				</div>
+			</div>
+			
+			<div class="content ranking-content">
+				<div class="ranking-front"></div>
+				<div class="podium">
+					<div class="podium-td">
+						<span class="podium-num num-two">2</span>
+						<div class="podium-two">
+							<span class="name-two">morine</span>
+							<span class="score-two">875</span>
+						</div>
+						<div class="the-podium podium-second"></div>
+					</div>
+					<div class="podium-td">
+						<span class="podium-num num-one">1</span>
+						<div class="podium-one">
+							<span class="name-one">浩秋</span>
+							<span class="score-one">888</span>
+						</div>
+						<div class="the-podium podium-first"></div>
+					</div>
+					<div class="podium-td">
+						<span class="podium-num num-three">3</span>
+						<div class="podium-three">
+							<span class="name-three">阿木</span>
+							<span class="score-three">721</span>
+						</div>
+						<div class="the-podium podium-third"></div>
+					</div>
+				</div>
+				<div class="rank-list">
+					<div class="list-tr">
+						<div class="list-td">4</div>
+						<div class="list-td">。。/:pig祥</div>
+						<div class="list-td">674</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">5</div>
+						<div class="list-td">小C</div>
+						<div class="list-td">652</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">6</div>
+						<div class="list-td">Agnes.Yao🙈</div>
+						<div class="list-td">638</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">7</div>
+						<div class="list-td">[机智]张佳森</div>
+						<div class="list-td">611</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">8</div>
+						<div class="list-td">毛爷爷夸我乖</div>
+						<div class="list-td">601</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">9</div>
+						<div class="list-td">L</div>
+						<div class="list-td">599</div>
+					</div>
+					<div class="list-tr">
+						<div class="list-td">10</div>
+						<div class="list-td">Hurricane</div>
+						<div class="list-td">555</div>
+					</div>
+				</div>
+			</div>
+			<div class="rank-btm">
+				<p>您目前的种子数是888，位于第<span>1</span>位</p>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/34role.html';
+				})
+				$(document).on('click','.guide35-1',function(){
+					self.location.href='36role.html';
+				})
+			})
+		</script>
+	</body>
+</html>

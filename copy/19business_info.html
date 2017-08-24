@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.business-content{
+				padding-top: 20px;
+			}
+			.shop-logo{
+				margin: auto;
+				padding: 3px;
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: #fff;
+				box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+				background-image: url(img/shoplogo.png);
+				background-position: 50%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				overflow: hidden;
+			}
+			.shop-logo .logo-upload{
+				opacity: 0.1;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background-color: #000;
+				background-image: url(img/logoupload.png);
+				background-position: 50%;
+				background-repeat: no-repeat;
+			}
+			.shop-info{
+				padding: 30px 10px 0px 10px;
+			}
+			.shop-info .form-group{
+				padding-bottom: 10px;
+			}
+			.shop-info .form-group label{
+				padding: 9px 0px;
+				font-size: 14px;
+			}
+			.shop-info .form-control{
+				padding: 9px 12px;
+				width: 100%;
+				background-color: #fff;
+				border-radius: 6px;
+				border:none;
+			}
+			.submit-shopinfo{
+				position: fixed;
+				left:0px;
+				bottom: 0px;
+				width: 100%;
+				height: 40px;
+				background-color: #333;
+				color: #ccc;
+				border:none;
+				letter-spacing: 1px;
+			}
+
+
+			.guide-back{
+				position: fixed;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+			.guide-next{
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide19-1{
+				left: 50%;
+				bottom:40px;
+			}
+
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide19-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<header class="bar bar-nav">
+				<a href="shop.html" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">完善小店基础信息</h1>
+			</header>
+
+			<div class="content business-content">
+				<div class="shop-logo" style="background-image: url(img/shoplogo.jpg);">
+					<div class="logo-upload"></div>
+				</div>
+				<div class="shop-info">
+					<div class="row form-group">
+						<label class="col-25">店铺名字</label>
+						<div class="col-75">
+							<input type="text" class="form-control" value="女神新衣" />
+						</div>
+					</div>
+					<div class="row form-group">
+						<label class="col-25">商品品类</label>
+						<div class="col-75">
+							<select class="form-control">
+								<option>女装类</option>
+							</select>
+						</div>
+					</div>
+					<textarea class="form-control" rows="3">欧美女装大牌代购。</textarea>
+				</div>
+				<div class="guide guide19-1">
+					<div class="guide-content">
+						完善基础信息后<br/>点击【提交小店基础信息】
+					</div>
+					<div class="line"></div>
+				</div>
+				<button class="submit-shopinfo guide-next">提交小店基础信息</button>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+				$(document).on('click','.submit-shopinfo',function(){
+					$.alert('提交成功！',function(){
+						self.location.href='20business_success.html';
+					})
+				})
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='18business.html';
+				})
+			})
+		</script>
+	</body>
+</html>

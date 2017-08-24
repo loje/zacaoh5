@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide33-1{
+				left: 50%;
+				top:2rem;
+			}
+			.guide33-2{
+				right: 20px;
+				bottom:20px;
+			}
+
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide33-1 .line{
+				float: right;
+			}
+			.guide33-2 .line{
+				margin: auto;
+			}
+			.guide33-2 .point{
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				background-color: rgba(0,0,0,0.75);
+				border-radius: 50%;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide33-1 .guide-content{
+				border-bottom-right-radius: 0px;
+			}
+			.record-content{
+				background-color: #645250;
+			}
+			.record-content .record-list .record-tabs .buttons-row .tab-link.active{
+				background-color: #a66b0a;
+			}
+			.record-content .record-list .record-tabs .buttons-row .tab-link{
+				border-color: #a66b0a;
+    			color: #a66b0a;
+			}
+		</style>
+	</head>
+	<body class="role_page">
+		<div class="page rolerecord_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">成就</h1>
+			</header>
+
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="content record-content">
+				<div class="index-bar">
+					<div class="media">
+						<div class="media-left">
+							<div class="userimg" style="background-image: url(../user/img/userimg.jpg);"></div>
+						</div>
+						<div class="media-body">
+							<h5>浩秋</h5>
+							<div class="level-bar">
+								<div class="level-ing" style="width: 67%;"></div>
+							</div>
+						</div>
+						<div class="media-right">
+							<div class="user-coins">
+								<div class="seeds">
+									<i class="iconfontzacao">&#xe60c;</i>
+									<p class="count">50</p>
+								</div>
+								<div class="points">
+									<i class="iconfontzacao">&#xe728;</i>
+									<p class="count">60</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="guide guide33-1">
+					<div class="guide-content">
+						可切换各类成就
+					</div>
+					<div class="line"></div>
+				</div>
+
+				<div class="guide guide33-2">
+					<div class="point"></div>
+					<div class="line"></div>
+					<div class="guide-content">
+						点击这里返回人物页面
+					</div>
+				</div>
+
+				<div class="record-list">
+					<div class="record-tabs">
+						<div class="buttons-row guide-next">
+							<a href="#tab1" class="tab-link active button">成长成就</a>
+							<a href="#tab2" class="tab-link button">校园成就</a>
+							<a href="#tab3" class="tab-link button">探索成就</a>
+						</div>
+						<div class="tabs">
+							<div id="tab1" class="tab tab-growth active">
+								<div class="tab-list">
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge11.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 98%;"></div>
+											</div>
+											<p>连续被邀33次</p>
+										</div>
+										<div class="media-right">
+											<span>33</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge12.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 35%;"></div>
+											</div>
+											<p>已消费种子7次</p>
+										</div>
+										<div class="media-right">
+											<span>7</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge13.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 66%;"></div>
+											</div>
+											<p>使用表白墙8次</p>
+										</div>
+										<div class="media-right">
+											<span>8</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge14.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 44%;"></div>
+											</div>
+											<p>使用恋爱计时器6次</p>
+										</div>
+										<div class="media-right">
+											<span>6</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge15.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 60%;"></div>
+											</div>
+											<p>使用杂草留言被精选6次</p>
+										</div>
+										<div class="media-right">
+											<span>6</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab2" class="tab tab-campus">
+								<div class="tab-list">
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge21.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 85%;"></div>
+											</div>
+											<p>杂草校园竞技</p>
+										</div>
+										<div class="media-right">
+											<span>30</span>
+										</div>
+									</div>
+									
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge22.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 20%;"></div>
+											</div>
+											<p>杂草校园挑战赛</p>
+										</div>
+										<div class="media-right">
+											<span>10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="tab3" class="tab tab-explore">
+								<div class="tab-list">
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge31.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 88%;"></div>
+											</div>
+											<p>完成兼职10次</p>
+										</div>
+										<div class="media-right">
+											<span>20</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge32.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 35%;"></div>
+											</div>
+											<p>发出全职简历5份</p>
+										</div>
+										<div class="media-right">
+											<span>5</span>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left">
+											<div class="img" style="background-image: url(img/badge33.png);"></div>
+										</div>
+										<div class="media-body">
+											<div class="progress-bar">
+												<div class="progress" style="width: 100%;"></div>
+											</div>
+											<p>完成创业成就</p>
+										</div>
+										<div class="media-right">
+											<span>10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="role-index" style="background-image: url(img/roleindex_bg.jpg);"></div> -->
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(".guide33-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px;");
+				$(window).resize(function(){
+					$(".guide33-1").attr("style","top:" + ($(".guide-next").offset().top-$(".guide").height()) + "px");
+				})
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='32role.html';
+				})
+				$(document).on('click','.guide33-2',function(){
+					self.location.href='34role.html';
+				})
+			})
+		</script>
+	</body>
+</html>

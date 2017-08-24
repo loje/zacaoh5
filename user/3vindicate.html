@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+
+		<link rel="stylesheet" href="vindicate.css">
+
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide3-1{
+				left: 50%;
+				bottom:40px;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide3-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page vindicate_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<a class="button button-link button-nav pull-right open-panel">
+					我的表白
+				</a>
+				<h1 class="title">表白</h1>
+			</header>
+
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="content vindicate-content">
+				<div class="vindicate-header">
+					<p>今天表白2个</p>
+					<p>一周表白10个</p>
+				</div>
+
+				<div class="content-block">
+					<div class="buttons-row">
+						<a href="#tab1" class="tab-link active button">最热</a>
+						<a href="#tab2" class="tab-link button">最新</a>
+					</div>
+				</div>
+				<div class="tabs">
+					<div id="tab1" class="tab tab-hot active">
+						<div class="list-block">
+							<div class="card-container">
+								<div class="card">
+									<div class="card-header">
+										<span>To：潘子晴</span>
+										<a class="likeit">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>303</span>
+										</a>
+										<a class="unlike" style="display: none;">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>303</span>
+										</a>
+									</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="love-content">
+												2016.07.20当我生日的时候，正是我们在一起半年的时候 异地恋 虽然很辛苦 但我也会坚持下去 无论我在哪 我都会努力的坚持！等我
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<div class="footer-table">
+											<div class="footer-td">
+												<div class="building">
+													<i class="iconfontzacao">&#xe604;</i>
+													<span>广东白云学</span>
+												</div>
+											</div>
+											<div class="footer-td">
+												<div class="tolove">
+													<p>From：张琛</p>
+													<p>2016.12.22</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<span>To：深龙会</span>
+										<a class="likeit">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>270</span>
+										</a>
+										<a class="unlike" style="display: none;">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>270</span>
+										</a>
+									</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="love-content">
+												深大龙高校友会我爱你！！！上了大学认识了很多人，每天都有很多事很忙碌，可是发现最想念的还是高中生活，那时的你们，那时的龙高，竟成了记忆中最美的牵挂。龙高人点赞！
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<div class="footer-table">
+											<div class="footer-td">
+												<div class="building">
+													<i class="iconfontzacao">&#xe604;</i>
+													<span>我的脑海</span>
+												</div>
+											</div>
+											<div class="footer-td">
+												<div class="tolove">
+													<p>From：super</p>
+													<p>2016.12.22</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="loading loading-hot">
+							<button class="button">加载更多</button>
+						</div>
+					</div>
+					<div id="tab2" class="tab">
+						<div class="list-block">
+							<div class="card-container">
+								<div class="card">
+									<div class="card-header">
+										<span>To：Kz</span>
+										<a class="likeit">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>0</span>
+										</a>
+										<a class="unlike" style="display: none;">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>0</span>
+										</a>
+									</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="love-content">
+												你喜欢科比我也喜欢，你喜欢篮球我也喜欢，即使你要追随你的梦，那我也只要独身一人去追随我想要的。
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<div class="footer-table">
+											<div class="footer-td">
+												<div class="building">
+													<i class="iconfontzacao">&#xe604;</i>
+													<span>广州</span>
+												</div>
+											</div>
+											<div class="footer-td">
+												<div class="tolove">
+													<p>From：Hz</p>
+													<p>2016.12.29</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-header">
+										<span>To：帆</span>
+										<a class="likeit">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>0</span>
+										</a>
+										<a class="unlike" style="display: none;">
+											<i class="iconfontzacao">&#xe600;</i>
+											<span>0</span>
+										</a>
+									</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="love-content">
+												撒浪嘿
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<div class="footer-table">
+											<div class="footer-td">
+												<div class="building">
+													<i class="iconfontzacao">&#xe604;</i>
+													<span>教学楼</span>
+												</div>
+											</div>
+											<div class="footer-td">
+												<div class="tolove">
+													<p>From：君</p>
+													<p>2016.12.29</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="loading loading-new">
+							<button class="button">加载更多</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="button-send send-vindicate guide-next">发布表白</a>
+			<div class="guide guide3-1">
+				<div class="guide-content">
+					点击【发布表白】
+				</div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<!-- vindicate Popup -->
+		<div class="popup popup-vindicate">
+			<p class="popup-header">
+				<span class="close-popup">不表白了</span>
+			</p>
+			<div class="content-block">
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="content-block-title">我想大声告诉你</div>
+							<input type="text" class="form-control name" value="小确幸">
+						</li>
+						<li>
+							<div class="content-block-title">我想对你说</div>
+							<textarea class="form-control conte" placeholder="最多80字...">虽然你长得不帅，还很黑（简直黑出新高度了）但是，还是对你有那么一种特别的感觉，情绪会随着你的变化而变化，会总想找你聊天。爱你！我的暖宝宝！  #特别的爱给特别#
+							</textarea>
+						</li>
+						<li>
+							<div class="content-block-title">无论你在哪</div>
+							<select class="form-control local">
+								<option value="0">雅致楼</option>
+							</select>
+						</li>
+						<li>
+							<div class="content-block-title">我就是</div>
+							<input type="text" class="form-control myname" value="大白">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="guide guide3-1">
+				<div class="guide-content">
+					点击【提交表白】
+				</div>
+				<div class="line"></div>
+			</div>
+			<a class="submit-vindicate guide-next">提交表白</a>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(document).on('click','.send-vindicate', function () {
+					$.popup('.popup-vindicate');
+				});
+				$(document).on('click','.submit-vindicate', function () {
+					self.location='../map/4index.html';
+				});
+				$(document).on('click','.guide-back',function(){
+					self.location="../map/2index.html";
+				})
+
+
+				$(document).on('click','.likeit',function(){
+					$(this).next().find("span").text(parseInt($(this).find("span").text()) + 1);
+					$(this).attr("style","display:none;");
+					$(this).next().removeAttr("style");
+					$(this).next().attr("style","opacity:0.25");
+				})
+
+				$(document).on('click','.unlike',function(){
+					$(this).prev().find("span").text(parseInt($(this).find("span").text()) - 1);
+					$(this).attr("style","display:none;");
+					$(this).prev().removeAttr("style");
+					// $(this).next().attr("style","opacity:0.5");
+				})
+			})
+		</script>
+	</body>
+</html>

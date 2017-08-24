@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide12-1{
+				left: 50%;
+				top:6.1rem;
+			}
+
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide12-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page page-current">
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<header class="bar bar-nav">
+				<h1 class="title">副本</h1>
+			</header>
+			<nav class="bar bar-tab">
+				<a class="tab-item" external>
+					<span class="icon">
+						<i class="iconfontzacao">&#xe610;</i>
+					</span>
+					<span class="tab-label">世界</span>
+				</a>
+				<a class="tab-item active" external>
+					<span class="icon icon-star"></span>
+					<span class="tab-label">副本</span>
+					<span class="badge">2</span>
+				</a>
+				<a class="tab-item" external>
+					<span class="icon icon-gift"></span>
+					<span class="tab-label">商城</span>
+				</a>
+				<a class="tab-item" external>
+					<span class="icon icon-settings"></span>
+					<span class="tab-label">我的</span>
+				</a>
+			</nav>
+			<div class="content copy-content">
+				<!-- Slider -->
+				<div class="swiper-container" data-space-between='10'>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(img/banner.jpg);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(http://wimg.huodongxing.com/Content/app/appom/752538647880974.jpg@!wmlogo);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(http://wimg.huodongxing.com/Content/app/appom/382542481677230.jpg@!wmlogo);"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="copy-function">
+					<div class="row">
+						<div class="col-100">
+							<a href="14rating.html" class="copy-parttime guide-next">
+								<i class="iconfontzacao">&#xe61c;</i>
+								<span>兼职</span>
+								<span class="badge">2</span>
+							</a>
+							<div class="guide guide12-1">
+								<div class="guide-content">
+									点击【兼职】
+								</div>
+								<div class="line"></div>
+							</div>
+						</div>
+						<div class="col-100">
+							<a class="copy-job">
+								<i class="iconfontzacao">&#xe647;</i>
+								<span>创业</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(".guide12-1").attr("style","top:" + ($(".guide-next").offset().top - $(".guide-next").height()) + "px;");
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../map/11.1index.html';
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<link rel="stylesheet" href="openlayers/theme/default/style.css" type="text/css" />
+
+		<link rel="stylesheet" href="../main.css">
+		<link rel="stylesheet" href="index.css">
+		<style type="text/css">
+			.map-box{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background-color: #000;
+			}
+			.modal {
+				background: radial-gradient(center, circle cover, rgb(68, 181, 73), rgb(104, 202, 23) 100%);
+				background: -webkit-radial-gradient(center, circle cover, rgb(68, 181, 73), rgb(104, 202, 23) 100%);
+			}
+			
+			.modal .modal-inner {
+				padding-top: 30%;
+				background-color: transparent;
+				background-image: url(img/icon_done.png);
+				background-repeat: no-repeat;
+				background-position: 50% 10%;
+			}
+			
+			.modal .modal-inner .modal-text {
+				color: #fff;
+			}
+			
+			.modal .modal-buttons {
+				box-shadow: 0px 3px 0px #b4b4b4;
+				border-radius: 0 0 .35rem .35rem;
+			}
+			
+			.modal .modal-buttons .modal-button {
+				color: #666;
+			}
+			
+			.olwidgetPopupContent {
+				background: none repeat scroll 0 0 #FFFFFF;
+				border-radius: 4px;
+				box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+				overflow: auto;
+				display: table;
+			}
+			
+			.olwidgetPopupContent p {
+				display: table-cell;
+				padding: 5px 10px;
+				font-size: 12px;
+				color: #4a4a4a;
+			}
+			
+			.olwidgetPopupContent a {
+				color: #333;
+				text-decoration: none;
+			}
+			
+			#transparentPopup_ {
+				-webkit-animation: bounceIn .5s ease both;
+				-moz-animation: bounceIn .5s ease both;
+			}
+			
+			@-webkit-keyframes bounceIn {
+				0% {
+					opacity: 0;
+					-webkit-transform: scale(.3)
+				}
+				50% {
+					opacity: 1;
+					-webkit-transform: scale(1.05)
+				}
+				70% {
+					-webkit-transform: scale(.9)
+				}
+				100% {
+					-webkit-transform: scale(1)
+				}
+			}
+			
+			@-moz-keyframes bounceIn {
+				0% {
+					opacity: 0;
+					-moz-transform: scale(.3)
+				}
+				50% {
+					opacity: 1;
+					-moz-transform: scale(1.05)
+				}
+				70% {
+					-moz-transform: scale(.9)
+				}
+				100% {
+					-moz-transform: scale(1)
+				}
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide2-1{
+				right: 48px;
+				bottom:122px;
+			}
+			.guide2-2{
+				right: 35px;
+				bottom:190px;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide2-1 .line{
+				float: right;
+			}
+			.guide2-2 .line{
+				float: right;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide2-1 .guide-content{
+				border-bottom-right-radius: 0px;
+			}
+			.guide2-2 .guide-content{
+				border-bottom-right-radius: 0px;
+			}
+
+			.olAlphaImg{
+				display: none;
+			}
+			#OL_Icon_52,
+			#OL_Icon_46{
+				width: initial!important;
+			}
+			.actinfo{
+				position: relative;
+				font-size: 12px;
+				padding-left: 84px;
+				line-height: 22px;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+				overflow: hidden;
+			}
+			.actinfo .local{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 60px;
+				text-align: center;
+				line-height: 22px;
+				font-size: 12px;
+			    background-color: #fbd249;
+			    color: rgba(0,0,0,0.5);
+			}
+			.actinfo i.iconfontzacao{
+				position: absolute;
+				left: 60px;
+				top: 0px;
+				padding: 0px 4px;
+				line-height: 22px;
+			    background-color: rgba(0,0,0,0.75);
+			    color: #fbd249;
+			}
+			.actinfo span{
+				float: right;
+				width: 100px;
+				height: 22px;
+				overflow: hidden;
+				white-space: nowrap;
+				letter-spacing: 1px;
+			    background-color: rgba(0,0,0,0.75);
+			    color: #fbd249;
+			}
+			div#OL_Icon_52,
+			div#OL_Icon_46 {
+				margin-left: 20px;
+				border-left: 1px solid rgba(0,0,0,0.75);
+			}
+		</style>
+	</head>
+
+	<body onload="init()">
+		<div class="page page-current">
+			<div class="splash">
+				<div class="splash-content">
+					<div class="content-td">
+						<div class="con"></div>
+						<p>杂草校园</p>
+					</div>
+				</div>
+			</div>
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-right open-panel select-map" data-panel='#panel-select-map'>
+					<i class="iconfontzacao">&#xe630;</i>
+				</a>
+				<h1 class="title">世界</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<nav class="bar bar-tab">
+				<a class="tab-item active" external>
+					<span class="icon">
+						<i class="iconfontzacao">&#xe610;</i>
+					</span>
+					<span class="tab-label">世界</span>
+				</a>
+				<a class="tab-item" external>
+					<span class="icon icon-star"></span>
+					<span class="tab-label">副本</span>
+					<!-- <span class="badge">2</span> -->
+				</a>
+				<a class="tab-item" external>
+					<span class="icon icon-gift"></span>
+					<span class="tab-label">商城</span>
+				</a>
+				<a class="tab-item" external>
+					<span class="icon icon-settings"></span>
+					<span class="tab-label">我的</span>
+				</a>
+			</nav>
+
+			<div class="map-index">
+				<div class="guide guide2-1">
+					<div class="guide-content">
+						点击悬浮球图标
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="guide guide2-2" style="display: none;">
+					<div class="guide-content">
+						点击表白图标
+					</div>
+					<div class="line"></div>
+				</div>
+				<div class="map-love map-hide guide-next" style="display: none;">
+					<i class="iconfontzacao">&#xe600;</i>
+				</div>
+				<div class="map-activity map-hide" style="display: none;">
+					<i class="iconfontzacao">&#xe606;</i>
+				</div>
+				<div class="map-course map-hide" style="display: none;">
+					<i class="iconfontzacao">&#xe605;</i>
+				</div>
+				<div class="map-test map-hide" style="display: none;">
+					<i class="iconfontzacao">&#xe618;</i>
+				</div>
+				<span class="map-menu">
+					<span class="ball ball-active" style="display: none;"></span>
+					<span class="ball ball-hide"></span>
+				</span>	
+			</div>
+
+			<div class="content index-content">
+				<!--map-->
+				<div class="map-box" id="map">
+				</div>
+			</div>
+		</div>
+
+		<div class="panel-overlay"></div>
+		<!-- Left Panel with Reveal effect -->
+		<div class="panel panel-right panel-reveal theme-dark panel-school" id='panel-select-map'>
+			<ul>
+				<li>
+					<a>
+						<span style="background-image: url(img/school2.jpg);"></span>
+						<p>深职院</p>
+					</a>
+				</li>
+				
+				<li>
+					<a>
+						<span style="background-image: url(img/school1.jpg);"></span>
+						<p>深圳大学</p>
+					</a>
+				</li>
+				
+				<li>
+					<a>
+						<span style="background-image: url(img/school3.jpg);"></span>
+						<p>深信息</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false};
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src="openlayers/OpenLayers.js"></script>
+		<script type='text/javascript' src="js/2szzy.js"></script>
+
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+
+				var splasha = setTimeout(function() {
+					$(".splash").addClass("splash-radius");
+					clearTimeout(splasha);
+					var splashb = setTimeout(function() {
+					$(".splash").attr("style","display:none;")
+						clearTimeout(splashb);
+					}, 500);
+				}, 2000);
+
+
+				$(document).on('click','.map-menu .ball',function(){
+					$(".guide2-1").attr("style","display:none;");
+					var display = setTimeout(function(){
+						clearTimeout(display);
+						$(".map-hide").removeAttr("style");
+						var show = setTimeout(function(){
+							clearTimeout(show);
+							$(".map-hide").addClass("map-active");
+							$(".map-hide").removeClass("map-hide");
+							$(".map-menu .ball-hide").attr("style","display:none;");
+							$(".ball-active").removeAttr("style");
+							$(".map-love").addClass("map-love-in");
+							$(".guide2-2").removeAttr("style");
+						},250)
+					},250);
+				})
+
+				$(document).on('click','.map-love',function(){
+					self.location="../user/3vindicate.html";
+				});
+
+				$(document).on('click','.guide-back',function(){
+					self.location="../wechat/1index.html";
+				});
+
+				// var act = setTimeout(function(){
+				// 	clearTimeout(act);
+				// 	$('#OL_Icon_52').append('<div class="actinfo"><div class="local">大运广场</div><i class="iconfontzacao">&#xe606;</i> <span><marquee>我有一本小黄书 [地点 深职/深大/信息（全校）]</marquee></span></div>');
+				// },500);
+			})
+		</script>
+	</body>
+</html>

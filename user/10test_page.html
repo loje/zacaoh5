@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide10-1{
+				left: 50%;
+				top:-55px;
+			}
+			.guide10-2{
+				left: 50%;
+				bottom:2.9rem;
+			}
+
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide10-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+			.guide10-2 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page testdetail_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<a class="button button-link button-nav pull-right">
+					我的测评
+				</a>
+				<h1 class='title'>测评</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="content test-content">
+				<div class="test-title">
+					<h4>社交恐惧测评</h4>
+				</div>
+				<div class="test-intro">
+					有些人讨厌面对人群或是害怕面对人群，他们不只是觉得害羞、不好意思，而是对自己以外的世界有着强烈的不安感和排斥感。这种对社交生活和群体的不适应而产生的焦虑和社交障碍称作社交恐惧症。那么你是否患有社交恐惧症呢？可以进行下面的测试得知。
+				</div>
+				
+				<div class="test-form">
+					<div class="guide guide10-1">
+						<div class="guide-content">
+							完成所有测评题目后<br/>点击【提交】
+						</div>
+						<div class="line"></div>
+					</div>
+					<form class="guide-next">
+						<div class="test-sub">
+							<h5>1. 和不熟的人聚会时，我会很不自然。</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios1" value="option1">
+									<span class="options">根本不符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios1" value="option1" checked>
+									<span class="options">某方面符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios1" value="option1">
+									<span class="options">比较符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios1" value="option1">
+									<span class="options">大部分符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios1" value="option1">
+									<span class="options">完全符合</span>
+								</label>
+							</div>
+						</div>
+						<div class="test-sub">
+							<h5>2. 和老师或上级交谈时我会很不自在。</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios2" value="option2" checked>
+									<span class="options">根本不符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios2" value="option2">
+									<span class="options">某方面符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios2" value="option2">
+									<span class="options">比较符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios2" value="option2">
+									<span class="options">大部分符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios2" value="option2">
+									<span class="options">完全符合</span>
+								</label>
+							</div>
+						</div>
+						<div class="test-sub">
+							<h5>3. 我在面试中常常不知所措。</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios3" value="option3">
+									<span class="options">根本不符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios3" value="option3">
+									<span class="options">某方面符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios3" value="option3" checked>
+									<span class="options">比较符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios3" value="option3">
+									<span class="options">大部分符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios3" value="option3">
+									<span class="options">完全符合</span>
+								</label>
+							</div>
+						</div>
+						<div class="test-sub">
+							<h5>4. 我是个比较内向的人。</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios4" value="option4">
+									<span class="options">根本不符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios4" value="option4">
+									<span class="options">某方面符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios4" value="option4">
+									<span class="options">比较符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios4" value="option4" checked>
+									<span class="options">大部分符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios4" value="option4">
+									<span class="options">完全符合</span>
+								</label>
+							</div>
+						</div>
+						<div class="test-sub">
+							<h5>5. 和一位权威人士对话使我很害怕。</h5>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios5" value="option5">
+									<span class="options">根本不符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios5" value="option5">
+									<span class="options">某方面符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios5" value="option5">
+									<span class="options">比较符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios5" value="option5">
+									<span class="options">大部分符合</span>
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="optionsRadios5" value="option5" checked>
+									<span class="options">完全符合</span>
+								</label>
+							</div>
+						</div>
+						<a class="button button-big open-sms-modal guide-next">提交</a>
+						<div class="guide guide10-2">
+							<div class="guide-content">
+								点击【提交】
+							</div>
+							<div class="line"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+
+				$(document).on('click','.open-sms-modal', function () {
+					if($("input[name='optionsRadios1']:checked").length == 0){
+						alert("第一题没填");
+					}else if($("input[name='optionsRadios2']:checked").length == 0){
+						alert("第二题没填");
+					}else if($("input[name='optionsRadios3']:checked").length == 0){
+						alert("第三题没填");
+					}else if($("input[name='optionsRadios4']:checked").length == 0){
+						alert("第四题没填");
+					}else if($("input[name='optionsRadios5']:checked").length == 0){
+						alert("第五题没填");
+					}else{
+						self.location='11test_result.html';			
+					}
+				});
+
+				$(document).on('click','.guide-back',function(){
+					self.location="../user/9test.html";
+				})
+			})
+		</script>
+	</body>
+</html>

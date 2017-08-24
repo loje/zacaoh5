@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide25-1{
+				right: 20px;
+				bottom:20px;
+			}
+
+			.guide .point{
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: rgba(255,255,255,0.5);
+			}
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(255,255,255,0.9);
+				color: #000;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class='title'>技能</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+
+			<div class="guide guide25-1">
+				<div class="point"></div>
+				<div class="line"></div>
+				<div class="guide-content">
+					点击这里返回人物页面
+				</div>
+			</div>
+			<div class="content prove-content">
+				<div class="buttons-tab">
+					<a href="#tab1" class="tab-link active button">所有技能</a>
+					<a href="#tab2" class="tab-link button">通用技能</a>
+					<a href="#tab3" class="tab-link button">专业技能</a>
+				</div>
+				<div class="content-block">
+					<div class="tabs">
+						<div id="tab1" class="tab active">
+							<div class="content-block">
+								<div class="hex-list">
+									<div class="hex getit">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话1级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话2级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话3级甲等
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="hex-list">
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话4级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话5级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话6级甲等
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="hex-list">
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话7级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话8级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex get">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话9级甲等
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="hex-list">
+									<div class="hex hex-new">		
+										<div class="hex-text">
+											<div class="text-td">
+												申请新技能
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="tab2" class="tab">
+							<div class="content-block">
+								<div class="hex-list">
+									<div class="hex getit">		
+										<div class="hex-text">
+											<div class="text-td">
+												普通话1级甲等
+											</div>
+										</div>
+									</div>
+									<div class="hex hex-new">		
+										<div class="hex-text">
+											<div class="text-td">
+												申请新技能
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="tab3" class="tab">
+							<div class="content-block">
+								<div class="hex-list">
+									<div class="hex hexpro-new">		
+										<div class="hex-text">
+											<div class="text-td">
+												申请新技能
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- Popup-box -->
+		<div class="popup popup-prove">
+			<div class="content-block">
+				<span class="reward">通用技能</span>
+				<a class="close-popup">x</a>
+				<div class="prove-detail">
+					<div class="media">
+						<div class="media-left">
+							<div class="hex">
+								<div class="hex-text">
+									<div class="text-td"></div>
+								</div>
+							</div>
+						</div>
+						<div class="media-body">
+							<p>需提供『普通话一级甲等证书』的相关照片或扫描件，或者可供证明的相关渠道。由杂草判断该技能是否有效，若有效则点亮您的新技能。</p>
+						</div>
+					</div>
+					<div class="chiose-pic">
+						<button class="btn tips" onclick="selectPic()">选择图片（最多5张，格式是jpg/png）</button>
+						<div class="row"></div>
+					</div>
+					<textarea rows="4" id="content" placeholder="在此填写你完成该项任务的说明,不能超过400字"></textarea>
+				</div>
+				<button class="button send-hex">提交</button>
+			</div>
+		</div>
+
+		<!-- Popup-box -->
+		<div class="popup popup-prove-new">
+			<div class="content-block">
+				<span class="reward">通用技能</span>
+				<a class="close-popup">x</a>
+				<div class="prove-detail">
+					<div class="media">
+						<div class="media-left">
+							<div class="hex hex-new">
+								<div class="hex-text">
+									<div class="text-td">申请新技能</div>
+								</div>
+							</div>
+						</div>
+						<div class="media-body">
+							<p>需提供新技能的相关照片或扫描件，或者可供证明的相关渠道。由杂草判断该技能是否有效，若有效则点亮您的新技能。</p>
+						</div>
+					</div>
+					<div class="chiose-pic">
+						<button class="btn tips" onclick="selectPic()">选择图片（最多5张，格式是jpg/png）</button>
+						<div class="row"></div>
+					</div>
+					<textarea rows="4" id="content" placeholder="在此填写你完成该项任务的说明,不能超过400字"></textarea>
+				</div>
+				<button class="button send-hex">提交</button>
+			</div>
+		</div>
+
+		<!-- Popup-box -->
+		<div class="popup popup-provepro-new">
+			<div class="content-block">
+				<span class="reward">专业技能</span>
+				<a class="close-popup">x</a>
+				<div class="prove-detail">
+					<div class="media">
+						<div class="media-left">
+							<div class="hex hex-new">
+								<div class="hex-text">
+									<div class="text-td">申请新技能</div>
+								</div>
+							</div>
+						</div>
+						<div class="media-body">
+							<p>需提供新技能的相关照片或扫描件，或者可供证明的相关渠道。由杂草判断该技能是否有效，若有效则点亮您的新技能。</p>
+						</div>
+					</div>
+					<div class="chiose-pic">
+						<button class="btn tips" onclick="selectPic()">选择图片（最多5张，格式是jpg/png）</button>
+						<div class="row"></div>
+					</div>
+					<textarea rows="4" id="content" placeholder="在此填写你完成该项任务的说明,不能超过400字"></textarea>
+				</div>
+				<button class="button send-hex">提交</button>
+			</div>
+		</div>
+
+		<input type="file" name="upload_file" id="upload_file" multiple accept="image/gif, image/jpeg, image/jpg, image/png"  style="display: none;" />
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			function selectPic(){
+				$("#upload_file").click();
+			}
+
+			$(function () {
+				$.init();
+
+				// $(document).on('click','.getit', function () {
+				// 	$(".popup-prove .content-block .prove-detail .media .media-left .hex  .hex-text .text-td").text($(this).find(".text-td").text());
+				// 	$.popup(".popup-prove");
+				// });
+
+				// $(document).on('click','.hex-new', function () {
+				// 	$.popup(".popup-prove-new");
+				// });
+
+				// $(document).on('click','.hexpro-new', function () {
+				// 	$.popup(".popup-provepro-new");
+				// });
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/24prove.html';
+				})
+				$(document).on('click','.guide25-1',function(){
+					self.location.href='../user/26role.html';
+				})
+			})
+		</script>
+	</body>
+</html>

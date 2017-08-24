@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.parttime-content .media{
+				display: table;
+			}
+			.parttime-content .media .media-left{
+				display: table-cell;
+				padding: 10px;
+				vertical-align: middle;
+			}
+			.cop-logo{
+				width: 60px;
+				height: 60px;
+				background-size: cover;
+				background-position: 50%;
+				border-radius: 50%;
+			}
+			.parttime-content .media .media-body{
+				display: table-cell;
+				width: 10000px;
+				vertical-align: middle;
+			}
+			.parttime-content .media .media-body h5{
+				margin: 0px;
+				font-size: 14px;
+				font-weight: normal;
+			}
+			.parttime-content .media .media-body p{
+				margin: 0px;
+				color: #a66b0a;
+			}
+			.parttime-content .media .media-body p span{
+				padding: 4px;
+				background-color: #a66b0a;
+				color: #fff;
+				border-radius:3px; 
+			}
+			.line-title {
+			    height: 15px;
+			    position: relative;
+			    margin-bottom: 4px;
+			}
+			.line-title:before {
+			    display: block;
+			    width: 100%;
+			    content: "";
+			    border-bottom: 1px solid #ccc;
+			    height: 10px;
+			    -webkit-transform: scaleY(0.5);
+			    transform: scaleY(0.5);
+			}
+			.line-title:after {
+			    position: absolute;
+			    width: 80px;
+			    height: 15px;
+			    line-height: 15px;
+			    text-align: center;
+			    top: 0;
+			    left: 50%;
+			    margin-left: -40px;
+			    background: #efeff4;
+			    color: #b8b8b8;
+			    content: attr(data-title);
+			    font-size: 13px;
+			    -webkit-transform: scaleY(1);
+			    transform: scaleY(1);
+			}
+			.parttime-info{
+				padding: 10px;
+			}
+			.parttime-info p{
+				margin: 0px;
+				padding: 5px 0px;
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+			.parttime-info .star-list{
+				padding-bottom: 15px;
+				text-align: center;
+			}
+			.parttime-info .star-list a{
+				font-size: 40px;
+				line-height: 40px;
+				color:#ccc;
+			}
+			.parttime-info .star-list a.go,
+			.parttime-info .star-list p{
+				color:#a66b0a;
+			}
+			.parttime-info .form-control{
+				padding: 9px 12px;
+				width: 100%;
+				border: 1px solid #ccc;
+				border-radius: 6px;
+			}
+			.submit-eva{
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 40px;
+				background-color: #333;
+				color: #ccc;
+				border:none;
+			}
+
+
+			.guide-back{
+				position: fixed;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+			.guide-next{
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide16-1{
+				left: 50%;
+				bottom:40px;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide16-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page parttimedetail_page">
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<header class="bar bar-nav">
+				<a href="javascript:history.go(-1);" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class='title'>兼职评价</h1>
+			</header>
+			<div class="content parttime-content">
+				<div class="media">
+					<div class="media-left">
+						<div class="cop-logo" style="background-image: url(img/coplogo.jpg);"></div>
+					</div>
+					<div class="media-body">
+						<h5>深圳启凡汇文化有限责任公司</h5>
+						<p><span class="badge">★</span> 4.9</p>
+					</div>
+				</div>
+				<div class="line-title" data-title="兼职信息"></div>
+				<div class="parttime-info">
+					<p>兼职职务 校园推广</p>
+					<p>兼职时长 2016-08-12至2016-08-22</p>
+				</div>
+				<div class="line-title" data-title="匿名评价雇主"></div>
+				<div class="parttime-info">
+					<div class="star-list">
+						<a class="go">★</a>
+						<a class="go">★</a>
+						<a class="go">★</a>
+						<a class="go">★</a>
+						<a class="go">★</a>
+						<p>如果再招人请叫上我</p>
+					</div>
+
+					<textarea class="form-control" rows="3">是个很有活力很有效率的工作团队，和他们一起共事很开心！</textarea>
+					<div class="guide guide16-1">
+						<div class="guide-content">
+							完成评价之后，点击【提交评价】
+						</div>
+						<div class="line"></div>
+					</div>
+					<button class="submit-eva guide-next">提交评价</button>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(document).on('click','.submit-eva',function(){
+					$.alert('评价成功！',function(){
+						self.location.href="17index.html";
+					});
+				});
+
+				$(document).on('click','.parttime-info .star-list a:nth-child(1)',function(){
+					$(".parttime-info .star-list a").removeClass("go");
+					$(".parttime-info .star-list a:nth-child(1)").addClass("go");
+					$(".parttime-info .star-list p").text('相忘于江湖');
+				})
+				$(document).on('click','.parttime-info .star-list a:nth-child(2)',function(){
+					$(".parttime-info .star-list a").removeClass("go");
+					$(".parttime-info .star-list a:nth-child(1)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(2)").addClass("go");
+					$(".parttime-info .star-list p").text('好聚好散');
+				})
+				$(document).on('click','.parttime-info .star-list a:nth-child(3)',function(){
+					$(".parttime-info .star-list a").removeClass("go");
+					$(".parttime-info .star-list a:nth-child(1)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(2)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(3)").addClass("go");
+					$(".parttime-info .star-list p").text('一般');
+				})
+				$(document).on('click','.parttime-info .star-list a:nth-child(4)',function(){
+					$(".parttime-info .star-list a").removeClass("go");
+					$(".parttime-info .star-list a:nth-child(1)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(2)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(3)").addClass("go");
+					$(".parttime-info .star-list a:nth-child(4)").addClass("go");
+					$(".parttime-info .star-list p").text('如果再招人会考虑去');
+				})
+				$(document).on('click','.parttime-info .star-list a:nth-child(5)',function(){
+					$(".parttime-info .star-list a").addClass("go");
+					$(".parttime-info .star-list p").text('如果再招人请叫上我');
+				})
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='15parttime_detail.html';
+				})
+			})
+		</script>
+	</body>
+</html>

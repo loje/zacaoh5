@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+
+			.guide-next{
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide41-1{
+				left: 50%;
+				bottom:10px;
+			}
+			.guide .point{
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+
+			.report-preface{
+				position: absolute;
+				left:0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				z-index: 2;
+			}
+			.report-preface .top-line{
+				position: absolute;
+				left: 0px;
+				top: 0.5rem;
+				width: 100%;
+				height: 0.3rem;
+			}
+			.report-preface .top-line .blue{
+				float: left;
+				width: 35%;
+				height: 100%;
+				background-color: #0862a9;
+			}
+			.report-preface .top-line .green{
+				float: right;
+				width: 65%;
+				height: 100%;
+				background-color: #129243;
+			}
+
+			.preface-table{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				display: table;
+				text-align: center;
+			}
+			.preface-table .preface-td{
+				display: table-cell;
+				vertical-align: middle;
+				color: #129243;
+			}
+			.see-report{
+				position: absolute;
+				left: 0px;
+				bottom: 10%;
+				width: 100%;
+				text-align: center;
+			}
+
+			.see-report .start{
+				display: inline-block;
+				padding: 9px 12px;
+				background-color: transparent;
+				border:1px solid #0862a9;
+				color: #0862a9;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page page-current">
+			<header class="bar bar-nav">
+				<a href="javascript:history.go(-1);" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">征信报告</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			
+			<div class="content report-content">
+				<div class="report-preface">
+					<div class="top-line">
+						<div class="blue"></div>
+						<div class="green"></div>
+					</div>
+					<div class="preface-table">
+						<div class="preface-td">
+							<p>对于企业而言，我们能提供什么？</p>
+							<p>更精准的用户画像</p>
+							<p>更有参考价值的征信报告</p>
+							<p>海量的用户资源</p>
+							<p>庞大的资金流</p>
+							<p>我们能够想象的还有更多</p>
+						</div>
+					</div>
+					<div class="see-report">
+						<button class="start">查看征信报告</button>
+					</div>
+					
+				</div>
+				<div class="swiper-container report-swiper" data-direction="vertical">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="the-page page1">
+								<div class="top-line">
+									<div class="blue"></div>
+									<div class="green"></div>
+								</div>
+								<div class="h5_btm">
+									<div class="cop"></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page2">
+								<div class="top-line">
+									<div class="blue"></div>
+									<div class="line-title">基础信息</div>
+									<div class="green"></div>
+								</div>
+								<div class="user-info">
+									<div class="user-pic" style="background-image: url(img/sam.jpg);"></div>
+									<h5>黄浩秋</h5>
+									<p>1992年6月出生</p>
+									<p>全日制大学专科学历</p>
+									<p>药学专业</p>
+
+									<div class="row">
+										<div class="col-50">
+											<p>
+												<a class="button button-link see-course">所学课程列表</a>
+											</p>
+										</div>
+										<div class="col-50">
+											<p>
+												<a class="button button-link see-minor">所学辅修列表</a>
+											</p>
+										</div>
+										<div class="col-50">
+											<p>
+												<a class="button button-link see-skill">专业技能列表</a>
+											</p>
+										</div>
+										<div class="col-50">
+											<p>
+												<a class="button button-link see-cert">专业证书列表</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page3">
+								<div class="top-line">
+									<div class="blue"></div>
+									<div class="line-title">兼职信息</div>
+									<div class="green"></div>
+								</div>
+								<table class="table">
+									<tr>
+										<td>
+											<h5>兼职出勤比例</h5>
+											<p>共报名64次兼职，其中出勤62次，未出勤2次</p>
+											<img src="img/echart1.png">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h5>兼职类型比例</h5>
+											<p>技术类50次，演绎类2次，服务类5次，销售类7次</p>
+											<img src="img/echart2.png">
+										</td>
+									</tr>
+								</table>
+								<div class="row">
+									<div class="col-50">
+										<p>
+											<a class="button button-link see-record">兼职记录一览</a>
+										</p>
+									</div>
+									<div class="col-50">
+										<p>
+											<a class="button button-link see-evaluate">双向评价一览</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page4">
+								<div class="top-line">
+									<div class="blue"></div>
+									<div class="line-title">创业信息</div>
+									<div class="green"></div>
+								</div>
+								<div class="shop-base">
+									<h5>店铺的基本情况</h5>
+									<table>
+										<tr>
+											<td>
+												<p>开店时间</p>
+												<span>2014.02.14</span>
+											</td>
+											<td>
+												<p>运营时长</p>
+												<span>2年35天</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>商品类型</p>
+												<span>女装</span>
+											</td>
+											<td>
+												<p>代理商品数</p>
+												<span>128</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+
+								<div class="shop-base">
+									<h5>店铺的盈利情况</h5>
+									<table>
+										<tr>
+											<td>
+												<p>总销售数</p>
+												<span>2888</span>
+											</td>
+											<td>
+												<p>订单数</p>
+												<span>1256</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>销售额</p>
+												<span>245667元</span>
+											</td>
+											<td>
+												<p>盈利额</p>
+												<span>12856元</span>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page5">
+								<div class="guide guide41-1">
+									<div class="point"></div>
+									<div class="line"></div>
+									<div class="guide-content">
+										演示结束，点击回到首页
+									</div>
+								</div>
+								<div class="top-line">
+									<div class="blue"></div>
+									<div class="line-title">情感信息</div>
+									<div class="green"></div>
+								</div>
+
+								<div class="emotion-info">
+									<h5>表白情况</h5>
+									<ul>
+										<li>
+											表白的对象个数：3个
+										</li>
+										<li>
+											表白次数：85次
+										</li>
+									</ul>
+								</div>
+
+								<div class="emotion-info">
+									<h5>测评情况</h5>
+									<ul>
+										<li>
+											参与测评次数：15次
+										</li>
+									</ul>
+								</div>
+
+								<div class="emotion-info">
+									<h5>活动参与情况</h5>
+									<ul>
+										<li>
+											参与活动次数：18次
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- course Popup -->
+		<div class="popup popup-course">
+			<div class="content-block">
+				<div class="content-block-title">所学课程列表</div>
+				<div class="list-block">
+					<ul>
+						<li>无机化学</li>
+						<li>分析化学</li>
+						<li>有机化学</li>
+						<li>生物化学与技术</li>
+						<li>微生物学</li>
+						<li>药理学</li>
+						<li>药物制剂技术</li>
+						<li>GMP概论</li>
+						<li>药品检验技术</li>
+						<li>中药调剂技术</li>
+					</ul>
+				</div>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+		<!-- minor Popup -->
+		<div class="popup popup-minor">
+			<div class="content-block">
+				<div class="content-block-title">所学辅修列表</div>
+				<div class="list-block">
+					<ul>
+						<li>医药营销基础</li>
+						<li>GMP原理</li>
+						<li>医药营销基础</li>
+						<li>药物制剂综合实训B</li>
+					</ul>
+				</div>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+		<!-- cert Popup -->
+		<div class="popup popup-cert">
+			<div class="content-block">
+				<div class="content-block-title">专业证书列表</div>
+				<div class="list-block">
+					<ul>
+						<li>执业药师证</li>
+						<li>药学职称证</li>
+					</ul>
+				</div>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+
+		<!-- skill Popup -->
+		<div class="popup popup-skill">
+			<div class="content-block">
+				<div class="content-block-title">专业技能列表</div>
+				<div class="list-block">
+					<ul>
+						<li>药学学生应该具备使用各种大型仪器设备的能力，掌握正确的生产工艺、科学投料配料、生产各环节的质量控制，分析和解决生产中出现的质量问题，提出解决方法。</li>
+						<li>在药品经营企业，药学学生应该能正确指导消费者合理用药，向购药者提供科学、合理、客观、可靠的咨询服务。</li>
+						<li>了解中、西药在储存保管过程中的变化规律，正确对药品进行储存、保管、养护，正确处理变质药品。</li>
+						<li>知法、懂法，学会用法律规范自己的行为，使自己的工作和做出的各项决策符合法律规定</li>
+						<li>要有继续学习的能力和不断获取新知识的能力。</li>
+					</ul>
+				</div>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+
+		<!-- record Popup -->
+		<div class="popup popup-record">
+			<div class="content-block">
+				<div class="content-block-title">兼职记录一览</div>
+				<table>
+					<tr>
+						<td>岗位信息</td>
+						<td>参与时间</td>
+						<td>参与时长</td>
+					</tr>
+					<tr>
+						<td>
+							兼职早教英语老师
+						</td>
+						<td>2014.06.08</td>
+						<td>16个小时</td>
+					</tr>
+					<tr>
+						<td>
+							PHP兼职讲师
+						</td>
+						<td>2014.08.12</td>
+						<td>30个小时</td>
+					</tr>
+					<tr>
+						<td>
+							微信运营
+						</td>
+						<td>2014.08.20</td>
+						<td>56个小时</td>
+					</tr>
+					<tr>
+						<td>
+							兼职数据录入员
+						</td>
+						<td>2014.10.01</td>
+						<td>21个小时</td>
+					</tr>
+					<tr>
+						<td>
+							派单员（美容美甲）
+						</td>
+						<td>2014.10.05</td>
+						<td>9个小时</td>
+					</tr>
+					<tr>
+						<td>
+							铣床师傅
+						</td>
+						<td>2014.11.08</td>
+						<td>6个小时</td>
+					</tr>
+				</table>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+
+		<!-- skill Popup -->
+		<div class="popup popup-evaluate">
+			<div class="content-block">
+				<div class="content-block-title">双向评价一览</div>
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="the-employer">
+								<h5>对深圳市爸妈圈文化传播有限公司评级</h5>
+								<p>综合得分 3</p>
+								<p>描述评级 ★★★★</p>
+							</div>
+							<div class="the-labor">
+								<h5>深圳市爸妈圈文化传播有限公司对您评级</h5>
+								<p>综合得分 4</p>
+								<p>描述评级 ★★★★★</p>
+							</div>
+						</li>
+						<li>
+							<div class="the-employer">
+								<h5>对北京翼企管理咨询有限公司评级</h5>
+								<p>综合得分 4.6</p>
+								<p>描述评级 ★★★★</p>
+							</div>
+							<div class="the-labor">
+								<h5>北京翼企管理咨询有限公司对您评级</h5>
+								<p>综合得分 4.3</p>
+								<p>描述评级 ★★★★★</p>
+							</div>
+						</li>
+						<li>
+							<div class="the-employer">
+								<h5>对长沙恒诺教育科技有限公司评级</h5>
+								<p>综合得分 5</p>
+								<p>描述评级 ★★★★</p>
+							</div>
+							<div class="the-labor">
+								<h5>长沙恒诺教育科技有限公司对您评级</h5>
+								<p>综合得分 4.7</p>
+								<p>描述评级 ★★★</p>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<p><a class="button button-link close-popup">返回</a></p>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+			    $.init();
+
+			    $(document).on('click','.start',function(){
+			    	$(".report-preface").remove();
+			    })
+
+				$(document).on('click','.see-course', function () {
+					$.popup('.popup-course');
+				});
+
+				$(document).on('click','.see-minor', function () {
+					$.popup('.popup-minor');
+				});
+
+				$(document).on('click','.see-cert', function () {
+					$.popup('.popup-cert');
+				});
+
+				$(document).on('click','.see-skill', function () {
+					$.popup('.popup-skill');
+				});
+
+				$(document).on('click','.see-record', function () {
+					$.popup('.popup-record');
+				});
+
+				$(document).on('click','.see-evaluate', function () {
+					$.popup('.popup-evaluate');
+				});
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/40yearbook.html';
+				});
+
+				$('.guide41-1').attr("style","left:" + ($(window).width()/2 - $('.guide41-1').width()/2) + "px;" );
+
+				$(document).on('click','.guide41-1',function(){
+					self.location.href='../wechat/1index.html';
+				});
+			})
+		</script>
+
+	</body>
+</html>

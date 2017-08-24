@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>杂草</title>
+
+		<link href="https://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet">
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="wechat.css">
+
+		<style type="text/css">
+			.iphone{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				height: 100%;
+				width: 100%;
+				background-image: url(img/screens.jpg);
+				background-size: cover;
+				z-index: 2;
+			}
+			.iphone .iphone-top{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 50px;
+				background-image: url(img/screens_top.png);
+				background-size: contain;
+				background-position: 50% 20%;
+				background-repeat: no-repeat;
+			}
+			.iphone .iphone-bottom{
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 100px;
+			}
+			.iphone .iphone-bottom .btm-bg .row{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				margin: 0px;
+				width: 100%;
+				z-index: 2;
+			}
+			.iphone .iphone-bottom .btm-bg .row .col-25{
+				float: left;
+				width: 25%;
+				padding: 10px 0px;
+				text-align: center;
+			}
+			.iphone .iphone-bottom .btm-bg .row .col-25 .app{
+				margin: auto;
+				width: 60px;
+				height: 60px;
+				background-color: #333;
+				border-radius: 12px;
+				text-align: center;
+			}
+			.iphone .iphone-bottom .btm-bg .row .col-25 .app i{
+				font-size: 36px;
+				line-height: 60px;
+				color: #fff;
+			}
+			.iphone .iphone-bottom .btm-bg .row .col-25 p{
+				margin: 0px;
+				padding-top: 5px;
+				color: #fff;
+				letter-spacing: 1px;
+			}
+			.iphone .iphone-bottom .btm-bg {
+				width: 100%;
+				height: 100%;
+				background-color: rgba(255,255,255,0.25);
+			}
+			.iphone .iphone-bottom .btm-bg .bg{
+				position: absolute;
+				left: 0px;
+				top:0px;
+				width: 100%;
+				height: 100%;
+				background-image: url(img/screens.jpg);
+				background-size: cover;
+				background-position: 50% 100%;
+				filter: url(blur.svg#blur);
+				-webkit-filter: blur(10px);
+				-moz-filter: blur(10px);
+				-ms-filter: blur(10px);    
+				filter: blur(10px);
+				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+			}
+			.iphone .apps .row{
+				margin: 0px;
+				padding-top: 20px;
+				width: 100%;
+			}
+			.iphone .apps .row .col-25{
+				float: left;
+				width: 25%;
+				padding: 10px 0px;
+				text-align: center;
+			}
+			.iphone .apps .row .col-25 .app{
+				margin: auto;
+				width: 60px;
+				height: 60px;
+				background-color: #333;
+				border-radius: 12px;
+				text-align: center;
+			}
+			.iphone .apps .row .col-25 .app i{
+				font-size: 36px;
+				line-height: 60px;
+				color: #fff;
+			}
+			.iphone .apps .row .col-25 p{
+				margin: 0px;
+				padding-top: 10px;
+				color: #fff;
+				letter-spacing: 1px;
+			}
+
+			.wx-start{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				text-align: center;
+			}
+			.wx-start .start-td{
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.start{
+				margin: auto;
+				width: 0%;
+				height: 0%;
+				background-image: url(img/wx_start.jpg);
+				background-position: 50%;
+				background-size: cover;
+				transition: width .25s,height .25s;
+				-webkit-transition: width .25s,height .25s;
+			}
+			.starting{
+				width: 100%;
+				height: 100%;
+			}
+
+			.swiper-container{
+				background-color: #ebebeb;
+			}
+
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide1-1{
+				left: 10px;
+				top:60px;
+			}
+			.guide1-2{
+				left: 50%;
+				bottom:40px;
+			}
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				font-size: 12px;
+				border-radius: 4px;
+			}
+			.guide1-1 .guide-content{
+				border-top-left-radius: 0px;
+			}
+			.guide1-2 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="iphone">
+			<div class="iphone-top"></div>
+			<div class="iphone-bottom">
+				<div class="btm-bg">
+					<div class="row">
+						<div class="col-25">
+							<div class="app wechat" style="background-color: #44b549;">
+								<i class="iconfontzacao">&#xe603;</i>
+							</div>
+							<p>微信</p>
+						</div>
+						<div class="col-25">
+							<div class="app" style="background-color: #ff3b30;">
+								<i class="iconfontzacao">&#xe60a;</i>
+							</div>
+							<p>微博</p>
+						</div>
+						<div class="col-25">
+							<div class="app" style="background-color: #0f88eb;">
+								<i class="iconfontzacao">&#xe6d1;</i>
+							</div>
+							<p>知乎</p>
+						</div>
+						<div class="col-25">
+							<div class="app" style="background-color: #072;">
+								<i class="iconfontzacao">&#xe601;</i>
+							</div>
+							<p>豆瓣</p>
+						</div>
+					</div>
+					<div class="bg"></div>
+				</div>
+			</div>
+			
+			<div class="apps">
+				<div class="row">
+					<div class="col-25">
+						<div class="app wechat" style="background-color: #44b549;">
+							<i class="iconfontzacao">&#xe603;</i>
+						</div>
+						<p>微信</p>
+					</div>
+					<div class="col-25">
+						<div class="app" style="background-color: #ff3b30;">
+							<i class="iconfontzacao">&#xe60a;</i>
+						</div>
+						<p>微博</p>
+					</div>
+					<div class="col-25">
+						<div class="app" style="background-color: #0f88eb;">
+							<i class="iconfontzacao">&#xe6d1;</i>
+						</div>
+						<p>知乎</p>
+					</div>
+					<div class="col-25">
+						<div class="app" style="background-color: #072;">
+							<i class="iconfontzacao">&#xe601;</i>
+						</div>
+						<p>豆瓣</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wx-start">
+			<div class="start-td">
+				<div class="start"></div>
+			</div>
+		</div>
+		<div class="swiper-container" style="opacity: 0;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="container">
+						<div class="top-title">
+							<div class="top-title-left">
+								<i class="iconfontzacao">&#xe774;</i> 公众号
+							</div>
+							<div class="top-title-right">
+								<i class="iconfontzacao">&#xe659;</i>
+							</div>
+						</div>
+						<p>Z</p>
+						<div class="list-group">
+							<div class="list-group-item">
+								<div class="media nextButton guide-next">
+									<div class="media-left">
+										<div class="mp-logo" style="background-image: url(img/zacao.jpg);"></div>
+									</div>
+									<div class="media-body">
+										<h5>杂草</h5>
+									</div>
+									<div class="guide guide1-1">
+										<div class="line"></div>
+										<div class="guide-content">
+											点击进入杂草公众号
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="media">
+									<div class="media-left">
+										<div class="mp-logo" style="background-image: url(img/zhaoshang.jpg);"></div>
+									</div>
+									<div class="media-body">
+										<h5>招商银行信用卡-深圳</h5>
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="media">
+									<div class="media-left">
+										<div class="mp-logo" style="background-image: url(img/zhenjing.jpg);"></div>
+									</div>
+									<div class="media-body">
+										<h5>震惊大事件</h5>
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="media">
+									<div class="media-left">
+										<div class="mp-logo" style="background-image: url(img/zhifubao.jpg);"></div>
+									</div>
+									<div class="media-body">
+										<h5>支付宝</h5>
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="media">
+									<div class="media-left">
+										<div class="mp-logo" style="background-image: url(img/zhihu.jpg);"></div>
+									</div>
+									<div class="media-body">
+										<h5>知乎日报</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<!-- <div class="guide-back">
+						<i class="iconfontzacao">&#xe774;</i> 返回上一步
+					</div> -->
+					
+					<div class="container">
+						<div class="top-title">
+							<div class="top-title-left">
+								<i class="iconfontzacao">&#xe774;</i> 杂草
+							</div>
+							<div class="top-title-right">
+								<i class="iconfontzacao">&#xe659;</i>
+							</div>
+						</div>
+						<ul class="btm-nav">
+							<div class="keyboard">
+								<button class="btn btn-default">
+									<i class="iconfontzacao">&#xe69f;</i>
+								</button>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 dropup">
+									<button id="aLabel" type="button" class="btn btn-block btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									这很有趣
+									<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="aLabel">
+										<li><a>表白墙</a></li>
+										<li><a>杂活儿</a></li>
+										<li><a>抢福利</a></li>
+										<li><a>逛黑店</a></li>
+										<li><a>玩接龙</a></li>
+									</ul>
+								</div>
+								<div class="col-xs-4 dropup">
+									<a href="../map/2index.html" class="btn btn-block btn-default guide-next">种子系统</a>
+								</div>
+								<div class="guide guide1-2">
+									<div class="guide-content">
+										点击【种子系统】进入杂草校园
+									</div>
+									<div class="line"></div>
+								</div>
+								<div class="col-xs-4 dropup">
+									<button id="aLabel" type="button" class="btn btn-block btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									这很杂草
+									<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="aLabel">
+										<li><a>杂草纪事</a></li>
+										<li><a>杂草文学</a></li>
+										<li><a>啥是杂草</a></li>
+										<li><a>转载须知</a></li>
+										<li><a>如何投稿</a></li>
+									</ul>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".wechat").click(function(){
+					$(".swiper-container").removeAttr("style");
+					$(".wx-start").attr("style","z-index:3;");
+					$(".start").addClass("starting");
+					var wechat = setTimeout(function(){
+						clearTimeout(wechat);
+						$(".swiper-container").attr("style","z-index:4;");
+					},1500);
+				})
+				var mySwiper = new Swiper ('.swiper-container', {
+					loop: false,
+					onlyExternal : true,
+					nextButton:'.nextButton',
+					prevButton:'.guide-back',
+				})
+			})
+		</script>
+	</body>
+</html>

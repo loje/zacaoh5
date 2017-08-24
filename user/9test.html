@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide9-1{
+				left: 50%;
+				top:-48px;
+			}
+
+			.guide .line{
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+			.guide9-1 .guide-content{
+				border-bottom-left-radius: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page test_page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<a class="button button-link button-nav pull-right">
+					我的测评
+				</a>
+				<h1 class='title'>测评</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="content test-content">
+				<!-- Slider -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(img/testbanner3.jpg);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(img/testbanner2.jpg);"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img" style="background-image: url(img/testbanner1.jpg);"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="list-block">
+					<a href="10test_page.html" class="media guide-next">
+						<div class="media-left">
+							<div class="img" style="background-image: url(img/testt1.jpg);">
+								<span class="badge-test">职业</span>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5>社交恐惧测评</h5>
+							<p>已有20人测试</p>
+						</div>
+						<div class="guide guide9-1">
+							<div class="guide-content">
+								点击进入测评页面
+							</div>
+							<div class="line"></div>
+						</div>
+					</a>
+
+					<a class="media">
+						<div class="media-left">
+							<div class="img" style="background-image: url(img/testt2.jpg);">
+								<span class="badge-test">职业</span>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5>MBTI职业测评</h5>
+							<p>已有20人测试</p>
+						</div>
+					</a>
+					<a class="media">
+						<div class="media-left">
+							<div class="img" style="background-image: url(img/testt3.jpg);">
+								<span class="badge-test">职业</span>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5>猜猜你所属动物类型</h5>
+							<p>已有20人测试</p>
+						</div>
+					</a>
+				</div>
+				<p class="loaded">加载完毕</p>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+				$(document).on('click','.guide-back',function(){
+					self.location="../map/8.2index.html";
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.popup-agreement{
+				top:initial;
+				bottom: 0px;
+				height: initial;
+			}
+			.popup-agreement .close-popup{
+				position: absolute;
+				right: 10px;
+				top:5px;
+				font-size: 12px;
+				color: #999;
+				background-color: #fff;
+			}
+			.popup-agreement .agreement-text{
+				padding: 30px 10px 50px 10px;
+				width: 100%;
+				height: 100%;
+				overflow: auto!important;
+			}
+			.popup-agreement .agreement-text h5{
+				margin: 0px;
+				text-align: center;
+				font-size: 16px;
+				letter-spacing: 1px;
+			}
+			.popup-agreement .agreement-text article{
+				padding: 10px 0px;
+				border-bottom: 1px dotted #ccc;
+			}
+			.popup-agreement .agreement-text article p{
+				margin: 0px;
+				padding-bottom: 10px;
+				font-size: 12px;
+				line-height: 22px;
+			}
+			.popup-agreement .label-checkbox{
+				display: block;
+				padding-top: 10px;
+			}
+			.popup-agreement .label-checkbox .item-media{
+				float: left;
+				padding-right: 10px;
+			}
+			.popup-agreement .label-checkbox .item-inner p{
+				margin: 0px;
+			}
+			.popup-agreement .agree{
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				width: 100%;
+				height: 40px;
+				background-color: #333;
+				color: #ccc;
+				border:none;
+			}
+			.popup-agreement .agree[disabled]{
+				background-color: #ccc;
+				color: #fff;
+			}
+
+
+			.guide-back{
+				position: fixed;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+			.guide-next{
+				overflow: initial;
+				box-shadow: 0px 0px 12px #000;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			.guide{
+				position: absolute;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide18-1{
+				left: 50%;
+				bottom:40px;
+			}
+
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+			}
+
+			.copy-function{
+				position: relative;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="page">
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<header class="bar bar-nav">
+				<a href="shop.html" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">创业介绍</h1>
+			</header>
+
+			<div class="content business-content">
+				<!-- Slider -->
+				<div class="swiper-container swiper-business" data-space-between='10' data-direction='vertical'>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="the-page page1"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page2">
+								<div class="the-title"></div>
+								<div class="line"></div>
+								<div class="page-table">
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page2-t1"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page2_p1.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page2-t2"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page2_p2.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page2-t3"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page2_p3.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page2-t4"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page2_p4.jpg);"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page3">
+								<div class="the-title"></div>
+								<div class="line"></div>
+								<div class="page-table">
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page3-t1"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page3_p1.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page3-t2"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page3_p2.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page3-t3"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page3_p3.jpg);"></div>
+										</div>
+									</div>
+									<div class="page-tr">
+										<div class="page-td">
+											<div class="page3-t4"></div>
+										</div>
+										<div class="page-td">
+											<div class="pic" style="background-image: url(img/page3_p4.jpg);"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="the-page page4">
+								<div class="line"></div>
+								<a class="btn getreport"></a>
+								<div class="page4-bg"></div>
+							</div>
+							
+							<div class="h5_btm">
+								<div class="cop" style="background-image: url(img/h5_btm.png);"></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup popup-agreement guide-next">
+			<div class="guide guide18-1">
+				<div class="guide-content">
+					拉到最底勾选同意协议后<br/>可以点击【我要开店】申请开店
+				</div>
+				<div class="line"></div>
+			</div>
+			<p><a href="#" class="close-popup">暂时不开店了</a></p>
+			<div class="agreement-text">
+				<h5>杂草创业协议</h5>
+				<article>
+					<p>【审慎阅读】您在申请注册流程中点击同意前，应当认真阅读以下协议。请您务必审慎阅读、充分理解协议中相关条款内容，其中包括：<p>
+					<p>1、与您约定免除或限制责任的条款；</p>
+					<p>2、与您约定法律适用和管辖的条款；</p>
+					<p>3、其他以粗体下划线标识的重要条款。</p>
+					<p>如您对协议有任何疑问，可向平台客服咨询。</p>
+					
+					<p>阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。</p>
+					<p>《杂草服务协议》《法律声明及隐私权政策》</p>
+				</article>
+				<label class="label-checkbox">
+					<input type="checkbox" name="agreement-radio">
+					<div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+					<div class="item-inner">
+						<p>同意以上协议</p>
+					</div>
+				</label>
+			</div>
+			<button class="agree" disabled="disabled">我要开店</button>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+
+				$(document).on('click', '.getreport',function (){
+					$.popup('.popup-agreement');
+				});
+
+				$('input[name="agreement-radio"]').change(function(){
+					if($(this).attr("checked")==true){
+						console.warn("我被选中啦！");
+						$(".popup-agreement .agree").removeAttr("disabled");
+					}else{
+						console.error("我没有选中");
+						$(".popup-agreement .agree").attr("disabled","disabled");
+					}
+				});
+
+				$(document).on('click','.popup-agreement .agree',function(){
+					self.location.href='19business_info.html';
+				});
+
+				$(document).on('click','.guide-back',function(){
+					self.location.href='17index.html';
+				})
+			})
+		</script>
+	</body>
+</html>

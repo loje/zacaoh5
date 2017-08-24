@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 11;
+			}
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+			.guide{
+				position: fixed;
+				z-index: 998;
+				animation: guideopacity .5s linear infinite alternate;
+				webkit-animation: guideopacity .5s linear infinite alternate;
+			}
+			@keyframes guideopacity
+			{
+			from {opacity: 1;}
+			to {opacity: 0.75}
+			}
+
+			@-webkit-keyframes guideopacity
+			{
+			from {-webkit-opacity: 1;}
+			to {-webkit-opacity: 0.75}
+			}
+			.guide38-1{
+				left: 50%;
+				bottom:2rem;
+			}
+
+			.guide .line{
+				margin: auto;
+				width: 1px;
+				height: 20px;
+				background-color: #000;
+				box-shadow: 0px 0px 6px #fff;
+			}
+
+			.guide .guide-content{
+				padding: 5px;
+				background-color: rgba(0,0,0,0.9);
+				color: #fff;
+				/*font-size: 12px;*/
+				border-radius: 4px;
+				text-align: center;
+			}
+			.guide38-2 .point{
+				margin: auto;
+				width: 12px;
+				height: 12px;
+				background-color: rgba(0,0,0,0.5);
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page jobdetail_page">
+			<header class="bar bar-nav">
+				<a href="javascript:history.go(-1);" class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class='title'>全职</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			
+			<div class="content job-content">
+				<div class="buttons-tab">
+					<a href="#tab1" class="tab-link active button">招聘信息</a>
+					<a href="#tab2" class="tab-link button">公司简介</a>
+				</div>
+				<div class="content-block">
+					<div class="tabs">
+						<div id="tab1" class="tab active">
+							<div class="guide guide38-1">
+								<div class="guide-content">
+									点击投递简历
+								</div>
+								<div class="line"></div>
+							</div>
+							<div class="guide guide38-2" style="display: none;">
+								<div class="guide-content">
+									大学落幕，我们都将收获一份毕业纪念册<br/>
+									点击这里进入毕业纪念册
+								</div>
+								<div class="line"></div>
+								<div class="point"></div>
+							</div>
+							<div class="job-top">
+								<h5>设计经理/主管</h5>
+								<p>深圳市超级美丽有限公司</p>
+								<div class="local">
+									<div class="map" style="background-image: url(img/map.jpg);"></div>
+								</div>
+								<div class="detail-info">
+									<p>月薪：面议</p>
+									<p>地点：深圳南山</p>
+									<p>专业要求：不限</p>
+									<p>招聘人数：2人</p>
+								</div>
+							</div>
+							<div class="job-detail">
+								<h5>岗位详情</h5>
+								<article>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</article>
+							</div>
+							<button class="button apply-button guide-next">投递简历</button>
+						</div>
+						<div id="tab2" class="tab">
+							<div class="cop-wall">
+								<div class="wall-table">
+									<div class="logo" style="background-image: url(http://src.house.sina.com.cn/imp/imp/deal/12/71/6/3d3c1821a927398062c31f9f813_p1_mk1.jpg);"></div>
+									<h5>深圳市超级美丽有限公司</h5>
+									<span class="badge">目前1个职位招聘中</span>
+								</div>
+								<div class="cop-bg" style="background-image: url(http://src.house.sina.com.cn/imp/imp/deal/12/71/6/3d3c1821a927398062c31f9f813_p1_mk1.jpg);"></div>
+							</div>
+							<div class="cop-info">
+								<p>地点 深圳市南山区同沙路123号</p>
+								<p>E-MAIL 暂无</p>
+								<p>联系电话 暂无</p>
+								<article>
+									<p>怡生乐居是中国的一家信息服务公司，总部位于北京海淀区。</p>
+									<p>第二类增值电信业务中的信息服务业务（不含固定网电话信息服务和互联网信息服务）；互联网信息服务（除新闻、出版、教育、医疗保健、药品、医疗器械以外的内容）。</p>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function () {
+				$.init();
+
+				$(document).on('click', '.apply-button',function (){
+					$.alert("简历投递成功，请等待通知。",function(){
+						$(".apply-button").text("已投递简历");
+						$(".apply-button").attr("disabled","disabled");
+
+						$(".guide38-1").attr("style","display:none;");
+						$(".apply-button").removeClass("guide-next");
+
+						$(".guide38-2").removeAttr("style");
+						$(".guide38-2").attr("style","left:" + ($(window).width()/2 - $(".guide38-2").width()/2) + "px;top:" + $(window).height()/2 + "px;")
+					});
+				})
+
+				$(document).on('click','.guide38-2',function(){
+					self.location.href='40yearbook.html';
+				})
+				$(document).on('click','.guide-back',function(){
+					self.location.href='../user/37job.html';
+				})
+			})
+		</script>
+	</body>
+</html>

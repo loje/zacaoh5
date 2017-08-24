@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'iconfontzacao';  /* project id 208913 */
+  src: url('https://at.alicdn.com/t/font_pjmjdwwwstgfogvi.eot');
+  src: url('https://at.alicdn.com/t/font_pjmjdwwwstgfogvi.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_pjmjdwwwstgfogvi.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_pjmjdwwwstgfogvi.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_pjmjdwwwstgfogvi.svg#iconfontzacao') format('svg');
+}
+
+body{
+	background-color: #ebebeb;
+}
+.iconfontzacao{
+    font-family:"iconfontzacao" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+.swiper-container{
+	position: fixed;
+	left: 0px;
+	top:0px;
+	width: 100%;
+	height: 100%;
+}
+.swiper-container .swiper-wrapper .swiper-slide{
+	position: relative;
+}
+.swiper-container .swiper-wrapper .swiper-slide .container p{
+	margin: 0px;
+	padding: 5px 0px;
+	color: #999;
+}
+.swiper-container .swiper-wrapper .swiper-slide .container .list-group{
+	margin: 0px -15px;
+}
+.list-group .list-group-item{
+	padding: 5px;
+	border-radius: 0px;
+}
+.list-group .list-group-item .media{
+	padding: 5px;
+}
+.list-group .list-group-item .media .media-left{
+	vertical-align: middle;
+}
+.list-group .list-group-item .media .media-left .mp-logo{
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	background-position: 50%;
+	border-radius: 50%;
+	border:1px solid #ccc;
+}
+.list-group .list-group-item .media .media-body{
+	vertical-align: middle;
+}
+.top-title{
+	position: relative;
+	margin: 0 -15px;
+	padding:10px;
+	background-color: #373b3e;
+	color: #fff;
+}
+.top-title .top-title-left .iconfontzacao{
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px solid rgba(255,255,255,0.5);
+}
+.top-title .top-title-right{
+	position: absolute;
+	right: 10px;
+	top:0px;
+	line-height: 42px;
+}
+.btm-nav{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border:1px solid #ccc;
+}
+.btm-nav .keyboard{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+.btm-nav .keyboard .btn{
+	padding:4px 9px;
+	border: none;
+	outline: none;
+	border-radius: 0px;
+}
+.btm-nav .keyboard .btn i.iconfontzacao{
+	font-size: 22px;
+}
+.btm-nav .row{
+	padding: 0px;
+	padding-left: 40px;
+	margin: 0px;
+}
+.btm-nav .row .dropup{
+	padding: 0px;
+}
+.btm-nav .row .dropup .btn{
+	padding:10px;
+	border-radius: 0px;
+	outline: none;
+	border:none;
+	border-left: 1px solid #ccc;
+}
+.btm-nav .row .dropup .dropdown-menu{
+	padding: 0px;
+	margin: 0px;
+	min-width: initial;
+	width: 100%;
+	border-radius: 0px;
+}
+.btm-nav .row .dropup .dropdown-menu li a{
+	display: block;
+	padding: 10px 0px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}

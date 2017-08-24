@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>杂草校园</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="https://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+
+		<link rel="stylesheet" href="../main.css">
+		<style type="text/css">
+			.role-content{
+				background-color: #645250;
+				color: #fff;
+				background-image: url(img/honor_role.png);
+				background-position: 50% 75%;
+				background-size: 45%;
+				background-repeat: no-repeat;
+			}
+			.honor-top{
+				padding-top: 1rem;
+				width:100%;
+				height:5rem;
+				text-align: center;
+				background-image: url(img/honor_user.png);
+				background-position:50%;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			.honor-top .honor-user{
+				margin: auto;
+				width: 3rem;
+				height: 3rem;
+				border-radius: 50%;
+				border:1px solid #ff9909;
+				background-position: 50%;
+				background-size: cover;
+			}
+			.user-name{
+				padding-bottom: 15px;
+				text-align: center;
+				letter-spacing: 2px;
+				font-size: 12px;
+			}
+			.honor-left{
+				float: left;
+				padding-left: 5px;
+				width: 40%;
+			}
+			.honor-left .skill h5,
+			.honor-left .name h5{
+				margin: 0px;
+				padding-bottom: 10px;
+				font-size: 14px;
+				font-weight: normal;
+				letter-spacing: 1px;
+			}
+			.honor-left .skill ul{
+				display: table;
+				margin: 0px;
+				padding:0px;
+				list-style: none;
+			}
+			.honor-left .skill ul li{
+				float: left;
+				padding-bottom: 10px;
+				width: 50%;
+				text-align: center;
+			}
+			.honor-left .skill ul li span{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border-radius: 12px;
+				background-color: rgba(0,0,0,0.25);
+				background-size: cover;
+			}
+			.honor-left .skill ul li p{
+				margin: 0px;
+				font-size: 8px;
+				height: 18px;
+			}
+			.honor-left .name span{
+				margin-bottom: 10px;
+				color: #fff;
+			}
+
+			.honor-right{
+				float: right;
+				padding-right: 5px;
+				width: 40%;
+			}
+			.honor-right .achieve h5{
+				padding-bottom: 10px;
+				margin: 0px;
+				font-size: 14px;
+				font-weight: normal;
+				letter-spacing: 1px;
+			}
+			.honor-right .achieve ul{
+				display: table;
+				margin: 0px;
+				padding:0px;
+				list-style: none;
+			}
+			.honor-right .achieve ul li{
+				float: left;
+				padding-bottom: 5px;
+				width: 50%;
+				text-align: center;
+			}
+			.honor-right .achieve ul li span{
+				display: inline-block;
+				width: 100%;
+				border-radius: 12px;
+				color: rgba(0,0,0,0.25);
+				background-size: cover;
+			}
+			.honor-right .achieve ul li span i.iconfontzacao{
+				font-size: 32px;
+				line-height: 32px;
+			}
+			.honor-right .achieve ul li p{
+				margin: 0px;
+				font-size: 8px;
+				height: 36px;
+			}
+
+			.guide-table{
+				position: fixed;
+				left: 0px;
+				top:0px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				z-index: 2001;
+			}
+			.guide-table .guide-td{
+				padding-bottom: 10%;
+				display: table-cell;
+				vertical-align: bottom;
+			}
+			.guide-table .guide-td a{
+				display: inline-block;
+				padding: 3px 9px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				/*font-size: 12px;*/
+				box-shadow: 0px 0px 12px #000;
+			}
+			.guide-table .guide-td .point-center{
+				position: relative;
+				text-align: center;
+			}
+			.guide-table .guide-td .point-center .point{
+				position: absolute;
+				top:-12px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: rgba(0,0,0,0.25);
+			}
+
+			.guide-back{
+				position: absolute;
+				left: 5px;
+				top:5px;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.75);
+				color: #fff;
+				border-radius: 6px;
+				font-size: 16px;
+				z-index: 2002;
+			}
+			.guide-next{
+				position: relative;
+				box-shadow: 0px 0px 12px #000;
+				border-radius: 6px;
+				z-index: 999;
+				animation: shadow .5s linear infinite alternate;
+				webkit-animation: shadow .5s linear infinite alternate;
+			}
+			@keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+
+			@-webkit-keyframes shadow
+			{
+			from {box-shadow: 0px 0px 12px #000;}
+			to {box-shadow: 0px 0px 6px rgba(0,0,0,0.5);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">荣誉殿堂</h1>
+			</header>
+			<div class="guide-back">
+				<i class="iconfontzacao">&#xe774;</i> 返回上一步
+			</div>
+			<div class="guide-table">
+				<div class="guide-td">
+					<div class="point-center">
+						<a class="guide-next" href="../user/32role.html">点击这里回到人物页面</a>
+						<div class="point"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content role-content">
+				<div class="honor-top">
+					<div class="honor-user" style="background-image: url(img/userimg.jpg);"></div>
+				</div>
+				<div class="user-name">
+					<span>黄浩秋</span>
+				</div>
+				<div class="honor-left">
+					<div class="skill">
+						<h5>技能</h5>
+						<ul>
+							<li>
+								<span style="background-image: url(img/photoshop.png);"></span>
+								<p>photoshop</p>
+							</li>
+							<li>
+								<span style="background-image: url(img/ai.jpg);"></span>
+								<p>Illustrator</p>
+							</li>
+							<li>
+								<span style="background-image: url(img/fl.jpg);"></span>
+								<p>Flash</p>
+							</li>
+							<li>
+								<span style="background-image: url(img/ae.jpg);"></span>
+								<p>After Effects</p>
+							</li>
+						</ul>
+					</div>
+					<div class="name">
+						<h5>称号</h5>
+						<span class="badge" style="background-color: #b17ee5;">黑夜毒龙钻</span>
+						<span class="badge" style="background-color: #e57e7e;">偷窥小王子</span>
+					</div>
+				</div>
+				<div class="honor-right">
+					<div class="achieve">
+						<h5>成就</h5>
+						<ul>
+							<li>
+								<span style="color: #6befff;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2016年签到最多</p>
+							</li>
+							<li>
+								<span style="color: #ffa800;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2016年种子最多</p>
+							</li>
+							<li>
+								<span style="color: #f23456;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2016年活动参与最多</p>
+							</li>
+							<li>
+								<span style="color: #e54321;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2015年签到最多</p>
+							</li>
+							<li>
+								<span style="color: #ee5324;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2015年种子最多</p>
+							</li>
+							<li>
+								<span style="color: #c66221;">
+									<i class="iconfontzacao">&#xe607;</i>
+								</span>
+								<p>2016年活动参与最多</p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script type='text/javascript' src='https://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$.config = {router: false}
+		</script>
+		<script type='text/javascript' src='https://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			$(function(){
+				$.init();
+				$(document).on('click','.guide-back',function(){
+					self.location.href='26role.html';
+				})
+
+				$(".guide-table .guide-td .point-center .point").attr("style","left:"+ ($(window).width()/2 - $(".guide-table .guide-td .point-center .point").width()/2) + "px;");
+			})
+		</script>
+	</body>
+</html>
