@@ -457,6 +457,8 @@
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$(".container").height($(window).height());
+				
 				$(".wechat").click(function(){
 					$(".swiper-container").removeAttr("style");
 					$(".wx-start").attr("style","z-index:3;");
